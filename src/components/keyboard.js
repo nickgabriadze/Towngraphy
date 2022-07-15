@@ -2,7 +2,7 @@ import './keyboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 
-export function Keyboard({type,dispatch}) {
+export function Keyboard({dispatch}) {
 
 
     return (
