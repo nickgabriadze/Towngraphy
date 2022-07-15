@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.textBox{
+    text-align: center;
+    font-size: 16px; 
+    font-weight: 100;
+    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
+}
+
+#user-input{
+    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
+    width: 10rem;
+    height: 1.5rem;
+    font-size:20px;
+}
