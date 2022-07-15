@@ -43,7 +43,7 @@ export function Keyboard({type,dispatch}) {
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'b'})}>B</button>
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'n'})}>N</button>
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'm'})}>M</button>
-                    <button onClick={()=>dispatch({type:"DELETE")}><FontAwesomeIcon icon={faDeleteLeft} /></button>
+                    <button onClick={()=>dispatch({type:"DELETE"})}><FontAwesomeIcon icon={faDeleteLeft} /></button>
                 </div>
             </div>
         </>
