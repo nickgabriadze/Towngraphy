@@ -1,15 +1,21 @@
 import './textBox.css'
+import { useRef } from 'react';
 
+export function TextBox({ randomCity, thatLetter }) {
+    const inputRef = useRef();
+    
+    const handleChange = (e) => {
+        thatLetter = e.target.value;
+    }
+    
 
-export function TextBox({randomCity}){
-
-
-    return(
+    return (
         <>
-        <div className="textBox">
-        <h1 id="pre-defined">{randomCity}</h1>
-        <input type='text' value={randomCity[randomCity.length-2].toUpperCase()} id="user-input"></input>
-        </div>
+            <div className="textBox">
+                <h1 id="pre-defined">{randomCity}</h1>
+                <input id="user-input"ref={inputRef} value={thatLetter} onChange={(e) => handleChange(e)}type="text" autofocus='true'></input>
+
+            </div>
         </>
     )
 };
