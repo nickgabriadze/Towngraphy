@@ -1,7 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.footer-container{
+.footer-container {
 
     position: fixed;
     border-top-right-radius: 5px;
@@ -12,34 +11,39 @@
 
 }
 
-#linkedIn-gigi, #linkedIn-nicka{
+#linkedIn-gigi,
+#linkedIn-nicka {
     text-decoration: none;
 }
 
-#flexable-footer{
-    
+#flexable-footer {
     padding: 0.5rem;
-    
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     justify-content: space-between;
 }
 
-a{
+a {
     text-decoration: none;
-    
     background-color: none;
-    color:#0077B5;
+    color: #0077B5;
 }
 
-#contact-mail{
+#contact-mail {
     font-size: 1.5rem;
-    color:black !important;
-    font-family:'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+    color: black !important;
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
 }
 
-#linkedIn-gigi{
+#linkedIn-gigi {
+    padding-right: 10px;
+}
+
+#copyright-logo-with-text {
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+#copyright-logo {
     padding-right: 2px;
 }
