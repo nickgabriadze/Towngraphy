@@ -9,16 +9,17 @@ button {
     width: 3rem;
     height: 3rem;
     text-decoration: none;
-    border:  2px solid white;
+    border: 2px solid white;
     background-color: #a4bdcb;
     font-size: 20px;
-  
-
 }
 
-button:hover{
+button:hover {
     background-color: #717e85;
+    transform: scale(1.1);
 }
+
+
 
 .keyboard-grid {
     display: flex;
@@ -27,7 +28,7 @@ button:hover{
 }
 
 #first-row {
-    
+
     padding-bottom: 0.2px;
 }
 

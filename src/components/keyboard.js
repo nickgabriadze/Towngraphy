@@ -7,7 +7,7 @@ export function Keyboard() {
     return (
         <>
             <div className="keyboard-grid">
-                    <div id="first-row">
+                <div id="first-row">
                     <button>Q</button>
                     <button>W</button>
                     <button>E</button>
@@ -18,9 +18,9 @@ export function Keyboard() {
                     <button>I</button>
                     <button>O</button>
                     <button>P</button>
-                    </div>
+                </div>
 
-                    <div id="second-row">
+                <div id="second-row">
                     <button>A</button>
                     <button>S</button>
                     <button>D</button>
@@ -30,10 +30,10 @@ export function Keyboard() {
                     <button>J</button>
                     <button>K</button>
                     <button>L</button>
-                    </div>
-              
+                </div>
 
-                    <div id="third-row">
+
+                <div id="third-row">
                     <button id="enter-button">Enter</button>
                     <button>Z</button>
                     <button>X</button>
@@ -43,8 +43,7 @@ export function Keyboard() {
                     <button>N</button>
                     <button>M</button>
                     <button><FontAwesomeIcon icon={faDeleteLeft} /></button>
-                    </div>
-                    
+                </div>
             </div>
         </>
     );

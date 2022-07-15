@@ -23,11 +23,11 @@ export function Footer() {
 
                     <a id="contact-mail" href="mailto:something@gmail.com">Contact</a>
                     <div id="copyright-logo-with-text">
-                    <FontAwesomeIcon id="copyright-logo" icon={faCopyright} />
+                        <FontAwesomeIcon id="copyright-logo" icon={faCopyright} />
                         All Rights Reserved
-                        </div>
+                    </div>
                 </div>
-                </div>
+            </div>
         </>
     );
 
