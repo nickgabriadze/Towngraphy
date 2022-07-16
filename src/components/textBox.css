@@ -1,40 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-.textBox{
+
+.textBox {
     display: grid;
     place-items: center;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 100;
-    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
-   
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
+
 }
 
-#box-for-input{
-    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
+#box-for-input {
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
     border-radius: 3px;
-    font-size:25px;
-    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    background-color: #ebeded;
     list-style: none;
     height: 2.5rem;
     width: 25rem;
-    border-style: solid; 
+    border-style: solid;
     font-weight: 300;
     border-color: #a4bdcb;
     overflow: hidden;
     box-shadow: 2px 2px #a4bdcb;
 }
 
-#answer{
-    
-    padding-left: 2px;
-    
+#answer {
+    padding-left: 3px;
 }
 
-#pre-defined{
-    color:#262a2c;
-    filter:drop-shadow(1px 0px 1px #717e85);
+#pre-defined {
+    color: #262a2c;
     padding-bottom: 5px;
 }
 
-#message{
+#message {
     padding-top: 10px;
 }

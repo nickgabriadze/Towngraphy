@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.timer{
+    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+    position: absolute;
+    right: 0;
+    padding-right: 50px;
+    padding-top: 20px;
+    text-align: center;
+    color: #626c76;
+
+}
+#time{
+    color: #92abba;
+    font-size: 3rem;
+}
