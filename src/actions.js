@@ -1,5 +1,7 @@
 export const ACTIONS = {
     ADD_LETTER: "ADD_LETTER",
     REMOVE_LETTER: "REMOVE_LETTER",
-    ENTER: "ENTER"
+    ENTER: "ENTER",
+    RESTART:"RESTART",
+    GAME_OVER: "GAME_OVER"
 }
