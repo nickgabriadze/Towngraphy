@@ -28,7 +28,7 @@ export function randCity(dict){
         24: 'Y',
         25: 'Z'
     }
-    let randChar = Alphabet[Math.floor(Math.random()*26)];
+    let randChar = Alphabet[Math.floor(Math.random()*5)];
     
     let specificCharValueLen = dict[randChar].length
     let city = dict[randChar][Math.floor(Math.random()*specificCharValueLen)]

@@ -5,14 +5,14 @@ import { Keyboard } from './components/keyboard.js';
 import {TextBox} from './components/textBox';
 import {ACTIONS} from './actions.js';
 import {randCity} from './checkOrGive/randomCity.js'
-
+import {cities} from './cities.js';
 
 
 function reducer(state, {type, payload}){
-  if(state.randomCity == undefined){
-    state.randomCity = 'Budapest'
+  if(state.randomCity == null){
+    state.randomCity = randCity(cities)
   }
-  if(state.letter == undefined){
+  if(state.letter == null){
     state.letter = state.randomCity[state.randomCity.length-2].toUpperCase()
   }
   switch(type){
@@ -38,9 +38,8 @@ function reducer(state, {type, payload}){
 function App() {
   
   
-  const [{randomCity = 'New York', letter=randomCity[randomCity.length - 2].toUpperCase()}, dispatch] = useReducer(reducer, {})
-
-
+  const [{randomCity=randCity(cities), letter=randomCity[randomCity.length-2].toUpperCase()}, dispatch] = useReducer(reducer, {})
+ 
   return (
     <>
 
