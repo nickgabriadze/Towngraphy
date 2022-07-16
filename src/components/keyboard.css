@@ -6,8 +6,8 @@ button {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     text-decoration: none;
     border: 2px solid white;
     background-color: #a4bdcb;
@@ -41,7 +41,7 @@ button:hover {
 }
 
 #enter-button {
-    width: 4rem;
+    width: 6rem;
 }
 
 #space{

@@ -1,53 +1,54 @@
+import React from 'react';
 import './keyboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 
-export function Keyboard({dispatch}) {
+export function Keyboard({ dispatch }) {
 
 
     return (
         <>
             <div className="keyboard-grid">
                 <div id="first-row">
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'q'})}>Q</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'w'})}>W</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'e'})}>E</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'r'})}>R</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 't'})}>T</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'y'})}>Y</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'u'})}>U</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'i'})}>I</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'o'})}>O</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'p'})}>P</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'q' })}>Q</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'w' })}>W</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'e' })}>E</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'r' })}>R</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 't' })}>T</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'y' })}>Y</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'u' })}>U</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'i' })}>I</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'o' })}>O</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'p' })}>P</button>
                 </div>
 
                 <div id="second-row">
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'a'})}>A</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 's'})}>S</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'd'})}>D</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'f'})}>F</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'g'})}>G</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'h'})}>H</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'j'})}>J</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'k'})}>K</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'l'})}>L</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: '-'})}>-</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'a' })}>A</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 's' })}>S</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'd' })}>D</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'f' })}>F</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'g' })}>G</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'h' })}>H</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'j' })}>J</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'k' })}>K</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'l' })}>L</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: '-' })}>-</button>
                 </div>
 
 
                 <div id="third-row">
-                    <button onClick={()=>dispatch({type:"ENTER"})}id="enter-button">Enter</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'z'})}>Z</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'x'})}>X</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'c'})}>C</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'v'})}>V</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'b'})}>B</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'n'})}>N</button>
-                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'm'})}>M</button>
-                    <button onClick={()=>dispatch({type:"REMOVE_LETTER"})}><FontAwesomeIcon icon={faDeleteLeft} /></button>
+                    <button onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'x' })}>X</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'c' })}>C</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'v' })}>V</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'b' })}>B</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'n' })}>N</button>
+                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'm' })}>M</button>
+                    <button onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft} /></button>
                 </div>
                 <div id="fourth-row">
-                    <button id="space"onClick={()=>dispatch({type:"ADD_LETTER", payload:" "})}></button>
+                    <button id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</button>
                 </div>
             </div>
         </>

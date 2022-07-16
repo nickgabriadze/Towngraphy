@@ -1,7 +1,7 @@
+import React from 'react';
 import './textBox.css'
-import { useState } from 'react'
 
-export function TextBox({ randomCity, thatLetter }) {
+export function TextBox({ randomCity, thatLetter, message }) {
  
 
 
@@ -9,10 +9,12 @@ export function TextBox({ randomCity, thatLetter }) {
     return (
         <>
             <div className="textBox">
-                <h1 id="pre-defined">{randomCity}</h1>
-                <div id='box-for-input'>
+                <h1 style={randomCity.lenght > 30 ? {'fontSize':'15px'}:{'fontSize':'25px'}}id="pre-defined">{randomCity}</h1>
+                
+                <div style={thatLetter.length > 25 ? {'width':'30rem'}:{'width':'25rem'}}id='box-for-input'>
                     <p id="answer">{thatLetter}</p>
                 </div>
+                <p id="message">{message}</p>
             </div>
         </>
     )

@@ -2,57 +2,89 @@ import React, { useReducer } from 'react';
 import './App.css';
 import { Footer } from './components/footer.js';
 import { Keyboard } from './components/keyboard.js';
-import {TextBox} from './components/textBox';
-import {ACTIONS} from './actions.js';
-import {randCity} from './checkOrGive/randomCity.js'
-import {cities} from './cities.js';
+import { TextBox } from './components/textBox';
+import { ACTIONS } from './actions.js';
+import { randCity } from './checkOrGive/randomCity.js'
+import { cities } from './cities.js';
+import {checkCity} from './checkOrGive/checkCity.js';
 
+function reducer(state, { type, char }) {
 
-function reducer(state, {type, payload}){
-  
-  switch(type){
+  switch (type) {
+
     case ACTIONS.ADD_LETTER:
-      
-      return({
-        ...state,
-        letter: state.letter + payload
-      })
-    case ACTIONS.REMOVE_LETTER:
-      if(state.letter.length === 1 ){
-        return state;
+      if (char === ' ') {
+        return({
+          ...state,
+          nextCity: state.nextCity + char,
+          upper: true,
+          message: ''
+        })
       }
-      return({
+      if (state.upper === true) {
+        return ({
+          ...state,
+          nextCity: state.nextCity + char.toUpperCase(),
+          upper: false,
+          message: ''
+        });
+      }
+
+      return ({
         ...state,
-        letter: state.letter.slice(0, -1)
-      })
-    
+        nextCity: state.nextCity + char,
+        upper: false,
+        message: ''
+      });
+
+    case ACTIONS.REMOVE_LETTER:
+      if (state.nextCity.length === 1) {
+        return state;
+      };
+      return ({
+        ...state,
+        nextCity: state.nextCity.slice(0, -1),
+        message: ''
+      });
+
     case ACTIONS.ENTER:
-      return({
+      if(!checkCity(cities, state.nextCity)){
+        return({
+          ...state,
+          message: 'Not In a City List!',
+          nextCity: state.randomCity[state.randomCity.length-2].toUpperCase()
+        })
+      }
+
+      let randomCity = randCity(cities)
+      let nextCity = randomCity[randomCity.length - 2].toUpperCase()
+      return ({
         ...state,
-        randomCity: randCity(cities),
-        letter: state.randomCity[state.randomCity.length-2].toUpperCase()
-      })
+        randomCity: randomCity,
+        nextCity: nextCity
+      });
     default: return state;
   }
 }
 
 function App() {
-  
-  
-  const [{randomCity=randCity(cities), letter=randomCity[randomCity.length-2].toUpperCase()}, dispatch] = useReducer(reducer, {})
- 
+
+  let generatedCity = randCity(cities);
+  let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
+  const [state, dispatch] = useReducer(reducer, { randomCity: generatedCity, nextCity: nextCity, message: '', upper: false,});
+
   return (
     <>
 
       <div className="container">
-      <div>
-      <TextBox randomCity={randomCity} thatLetter={letter}/>
-      </div> 
-      <div id="keyBoard">
-      <Keyboard dispatch={dispatch}/>
+        <div>
+          <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} />
+        </div>
+        <div id="keyBoard">
+          <Keyboard dispatch={dispatch} />
+        </div>
       </div>
-      </div>
-      
+
       <Footer />
 
     </>
