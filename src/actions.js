@@ -1,0 +1,5 @@
+export const ACTIONS = {
+    ADD_LETTER: "ADD_LETTER",
+    REMOVE_LETTER: "REMOVE_LETTER",
+    ENTER: "ENTER"
+}

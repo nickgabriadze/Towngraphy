@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .textBox{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     font-size: 16px; 
     font-weight: 100;
     font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
-#user-input{
+#box-for-input{
     font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
     
     border-radius: 3px;
     font-size:25px;
     background-color: rgb(255, 255, 255);
     list-style: none;
-    line-height: 10px;
-    width: 15rem;
+    height: 2.5rem;
+    width: 20rem;
     border-style: solid; 
+    font-weight: 300;
     border-color: #a4bdcb;
-   
+    overflow: hidden;
+}
+
+#answer{
+    padding-left: 2px;
 }
