@@ -9,12 +9,7 @@ import {cities} from './cities.js';
 
 
 function reducer(state, {type, payload}){
-  if(state.randomCity == null){
-    state.randomCity = randCity(cities)
-  }
-  if(state.letter == null){
-    state.letter = state.randomCity[state.randomCity.length-2].toUpperCase()
-  }
+  
   switch(type){
     case ACTIONS.ADD_LETTER:
       
@@ -30,7 +25,13 @@ function reducer(state, {type, payload}){
         ...state,
         letter: state.letter.slice(0, -1)
       })
-
+    
+    case ACTIONS.ENTER:
+      return({
+        ...state,
+        randomCity: randCity(cities),
+        letter: state.randomCity[state.randomCity.length-2].toUpperCase()
+      })
     default: return state;
   }
 }

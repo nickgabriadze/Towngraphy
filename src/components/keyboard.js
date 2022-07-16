@@ -31,6 +31,7 @@ export function Keyboard({dispatch}) {
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'j'})}>J</button>
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'k'})}>K</button>
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'l'})}>L</button>
+                    <button onClick={()=>dispatch({type:"ADD_LETTER", payload: '-'})}>-</button>
                 </div>
 
 
@@ -44,6 +45,9 @@ export function Keyboard({dispatch}) {
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'n'})}>N</button>
                     <button onClick={()=>dispatch({type:"ADD_LETTER", payload: 'm'})}>M</button>
                     <button onClick={()=>dispatch({type:"REMOVE_LETTER"})}><FontAwesomeIcon icon={faDeleteLeft} /></button>
+                </div>
+                <div id="fourth-row">
+                    <button id="space"onClick={()=>dispatch({type:"ADD_LETTER", payload:" "})}></button>
                 </div>
             </div>
         </>

@@ -34,17 +34,20 @@ button:hover {
 
 #second-row {
     padding-top: 0.5px;
-    padding-left: 20px;
-
 }
 
 #third-row {
     padding-top: 0.5px;
-    padding-left: 2px;
 }
 
 #enter-button {
-    width: 5rem;
+    width: 4rem;
 }
 
+#space{
+    width: 100%;
+}
+#space:hover{
+    transform: scale(1.01) !important
+}
 
