@@ -5,6 +5,7 @@
     font-size: 16px; 
     font-weight: 100;
     font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
+   
 }
 
 #box-for-input{
@@ -19,14 +20,18 @@
     font-weight: 300;
     border-color: #a4bdcb;
     overflow: hidden;
+    box-shadow: 2px 2px #a4bdcb;
 }
 
 #answer{
+    
     padding-left: 2px;
     
 }
 
 #pre-defined{
+    color:#262a2c;
+    filter:drop-shadow(1px 0px 1px #717e85);
     padding-bottom: 5px;
 }
 
