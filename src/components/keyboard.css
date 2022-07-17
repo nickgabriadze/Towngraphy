@@ -49,6 +49,6 @@ button:hover {
     width: 100%;
 }
 #space:hover{
-    transform: scale(1.01) !important
+    transform: scale(0.99) !important
 }
 
