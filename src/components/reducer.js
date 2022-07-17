@@ -1,6 +1,5 @@
 import { ACTIONS } from "../actions.js";
 import { checkCity } from "../checkOrGive/checkCity.js";
-import { randCity } from "../checkOrGive/randomCity.js";
 import { cities } from "../cities.js";
 export function reducer(state, { type, char }) {
 
@@ -45,7 +44,6 @@ export function reducer(state, { type, char }) {
             });
 
         case ACTIONS.ENTER:
-
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
@@ -54,13 +52,13 @@ export function reducer(state, { type, char }) {
                 })
             }
 
-            let randomCity = randCity(cities)
-            let nextCity = randomCity[randomCity.length - 2].toUpperCase()
+            let currentCity = state.nextCity
+            let nextOne = currentCity[currentCity.length - 2].toUpperCase()
 
             return ({
                 ...state,
-                randomCity: randomCity,
-                nextCity: nextCity,
+                randomCity: currentCity,
+                nextCity: nextOne,
                 started: true,
                 guessed: state.guessed + 1,
             });

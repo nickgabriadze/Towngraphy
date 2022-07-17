@@ -4,14 +4,14 @@ import { Footer } from './components/footer.js';
 import { Keyboard } from './components/keyboard.js';
 import { TextBox } from './components/textBox';
 import { randCity } from './checkOrGive/randomCity.js'
-import { cities } from './cities.js';
+import { popularCities } from './cities.js';
 import { Timerwithscore } from './components/timer.js';
 import { reducer } from './components/reducer.js';
 import { HandleTimer } from './checkOrGive/handleTimer.js';
 
 function App() {
 
-  let generatedCity = randCity(cities);
+  let generatedCity = randCity(popularCities);
   let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
   
   
