@@ -47,7 +47,7 @@ export function Keyboard({ dispatch }) {
                         onClick={() => dispatch({ type: "ADD_LETTER", char: 'a' })}>A</motion.button>
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        nClick={() => dispatch({ type: "ADD_LETTER", char: 's' })}>S</motion.button>
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 's' })}>S</motion.button>
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => dispatch({ type: "ADD_LETTER", char: 'd' })}>D</motion.button>
