@@ -23,7 +23,7 @@ export function HandleTimer(started) {
           started = false
         }
       }
-    }, 100)
+    }, 1000)
   
     return [formattedMinute, formattedSecond]
   }
