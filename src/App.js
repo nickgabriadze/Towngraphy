@@ -21,7 +21,9 @@ function App() {
         randomCity: generatedCity, nextCity: nextCity,
         message: '', upper: false, guessed: 0, started: false
       });
+
   let [minute, second] = HandleTimer(state.started)   
+
   return (
     <>
       <Timerwithscore minute={minute} second={second} guessed={state.guessed} />
@@ -35,7 +37,10 @@ function App() {
         </div>
       </div>
 
-      <Footer />
+      <div id='footer'>
+      <Footer />   
+      </div>
+      
 
     </>
   );

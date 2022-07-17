@@ -1,8 +1,8 @@
 import { ACTIONS } from "../actions.js";
 import { checkCity } from "../checkOrGive/checkCity.js";
 import { cities } from "../cities.js";
-export function reducer(state, { type, char }) {
 
+export function reducer(state, { type, char }) {
 
     switch (type) {
 
@@ -44,6 +44,7 @@ export function reducer(state, { type, char }) {
             });
 
         case ACTIONS.ENTER:
+            state.nextCity = state.nextCity.trim()
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,

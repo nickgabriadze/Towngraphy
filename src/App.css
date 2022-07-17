@@ -22,3 +22,9 @@ body{
     align-items: center;
     padding-top: 150px;
 }
+
+@media (max-width: 480px){
+    #footer{
+        display: none;
+    }
+}

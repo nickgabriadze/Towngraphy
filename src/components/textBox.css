@@ -36,3 +36,11 @@
 #message {
     padding-top: 10px;
 }
+
+@media (max-width: 480px) {
+    #box-for-input{
+        height: 2rem;
+        width: 18rem;
+        font-size:20px
+    }
+}
