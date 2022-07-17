@@ -15,10 +15,6 @@ button {
 
 }
 
-button:hover {
-    background-color: #717e85;
-    transform: scale(0.9);
-}
 
 
 
@@ -49,9 +45,6 @@ button:hover {
     width: 100%;
 }
 
-#space:hover {
-    transform: scale(0.99) !important
-}
 
 @media (max-width:480px) {
     #enter-button {

@@ -2,53 +2,102 @@ import React from 'react';
 import './keyboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
-
+import { motion } from "framer-motion";
 export function Keyboard({ dispatch }) {
-
 
     return (
         <>
             <div className="keyboard-grid">
                 <div id="first-row">
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'q' })}>Q</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'w' })}>W</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'e' })}>E</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'r' })}>R</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 't' })}>T</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'y' })}>Y</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'u' })}>U</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'i' })}>I</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'o' })}>O</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'p' })}>P</button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'q' })}>Q</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'w' })}>W</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'e' })}>E</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'r' })}>R</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 't' })}>T</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'y' })}>Y</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'u' })}>U</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'i' })}>I</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'o' })}>O</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'p' })}>P</motion.button>
                 </div>
 
                 <div id="second-row">
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'a' })}>A</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 's' })}>S</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'd' })}>D</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'f' })}>F</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'g' })}>G</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'h' })}>H</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'j' })}>J</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'k' })}>K</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'l' })}>L</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: '-' })}>-</button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'a' })}>A</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        nClick={() => dispatch({ type: "ADD_LETTER", char: 's' })}>S</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'd' })}>D</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'f' })}>F</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'g' })}>G</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'h' })}>H</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'j' })}>J</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'k' })}>K</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: 'l' })}>L</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => dispatch({ type: "ADD_LETTER", char: '-' })}>-</motion.button>
                 </div>
 
 
                 <div id="third-row">
-                    <button onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'x' })}>X</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'c' })}>C</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'v' })}>V</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'b' })}>B</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'n' })}>N</button>
-                    <button onClick={() => dispatch({ type: "ADD_LETTER", char: 'm' })}>M</button>
-                    <button onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft} /></button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'x' })}>X</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'c' })}>C</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'v' })}>V</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'b' })}>B</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'n' })}>N</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'm' })}>M</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft}/></motion.button>
                 </div>
                 <div id="fourth-row">
-                    <button id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</button>
+                    <motion.button whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.96 }} id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</motion.button>
                 </div>
             </div>
         </>

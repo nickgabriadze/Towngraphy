@@ -22,7 +22,8 @@ function App() {
         message: '', upper: false, guessed: 0, started: false
       });
 
-  let [minute, second] = HandleTimer(state.started)   
+  let [minute, second] = HandleTimer(state.started)
+    
 
   return (
     <>
@@ -40,7 +41,7 @@ function App() {
       <div id='footer'>
       <Footer />   
       </div>
-      
+
 
     </>
   );

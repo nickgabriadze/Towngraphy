@@ -21,10 +21,9 @@ export function HandleTimer(started) {
           setSeconds(0);
           setMinutes(0);
           started = false
-  
         }
       }
-    }, 1000)
+    }, 100)
   
     return [formattedMinute, formattedSecond]
   }
