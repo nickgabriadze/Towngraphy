@@ -10,10 +10,6 @@
    
 }
 
-#linkedIn-gigi,
-#linkedIn-nicka {
-    text-decoration: none;
-}
 
 #flexable-footer {
     padding: 0.5rem;
@@ -27,18 +23,20 @@
 a {
     text-decoration: none;
     background-color: none;
-    color: #0077B5;
+    color: #010101;
 }
 
 #contact-mail {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: black !important;
     font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
 }
-
-#linkedIn-gigi {
-    padding-right: 10px;
+#envelope{
+    font-size: 1.3rem;
+    padding-right: 2px;
+    cursor: pointer;
 }
+
 
 #copyright-logo-with-text {
     font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
