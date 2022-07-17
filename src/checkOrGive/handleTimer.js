@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 export function HandleTimer(started) {
     const [minutes, setMinutes] = useState(1);
-    const [seconds, setSeconds] = useState(0);
+    const [seconds, setSeconds] = useState(20);
   
     let formattedMinute = minutes > 9 ? minutes : `0${minutes}`
     let formattedSecond = seconds > 9 ? seconds : `0${seconds}`
