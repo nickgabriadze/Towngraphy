@@ -13,11 +13,11 @@ export function Footer() {
                 <div id="flexable-footer">
                     <div id="linkedIn-logos">
 
-                        <a id="linkedIn-gigi" href="https://www.linkedin.com/in/gigijishkariani/" target='_blank'>
+                        <a id="linkedIn-gigi" href="https://www.linkedin.com/in/gigijishkariani/" target='_blank' rel="noreferrer">
                             <i className="fa fa-linkedin-square fa-2x" aria-hidden="true">   </i>
                         </a>
 
-                        <a id="linkedIn-nicka" href="https://www.linkedin.com/in/nickgabriadze/" target='_blank'>
+                        <a id="linkedIn-nicka" href="https://www.linkedin.com/in/nickgabriadze/" target='_blank' rel="noreferrer">
                             <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                         </a>
                     </div>
