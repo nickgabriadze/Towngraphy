@@ -44,9 +44,17 @@ export function reducer(state, { type, char }) {
                     nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
                 })
             }
-
+            for(let i = 0; i < state.usedCities.length; i++){
+                if(state.usedCities[i] === state.nextCity){
+                    return({
+                        ...state,
+                        message: "You already said that one!"
+                    })
+                }
+            }
             let currentCity = state.nextCity
             let nextOne = currentCity[currentCity.length - 2].toUpperCase()
+            console.log(state.usedCities)
 
             return ({
                 ...state,
@@ -54,6 +62,8 @@ export function reducer(state, { type, char }) {
                 nextCity: nextOne,
                 started: true,
                 guessed: state.guessed + 1,
+                usedCities: [...state.usedCities, currentCity]
+
             });
 
         default: return state;
