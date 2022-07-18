@@ -26,6 +26,7 @@
 
 #answer {
     padding-left: 3px;
+    text-align: center;
 }
 
 #pre-defined {
@@ -39,7 +40,7 @@
 
 @media (max-width: 480px) {
     #box-for-input{
-        height: 2rem;
+        height: 2.42rem;
         width: 18rem;
         font-size:20px
     }
