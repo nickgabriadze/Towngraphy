@@ -54,8 +54,7 @@ export function reducer(state, { type, char }) {
             }
             let currentCity = state.nextCity
             let nextOne = currentCity[currentCity.length - 2].toUpperCase()
-            console.log(state.usedCities)
-
+           
             return ({
                 ...state,
                 randomCity: currentCity,
