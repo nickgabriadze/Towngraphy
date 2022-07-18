@@ -19,7 +19,7 @@ function App() {
     useReducer(reducer,
       {
         randomCity: generatedCity, nextCity: nextCity,
-        message: '', upper: false, guessed: 0, started: false
+        message: '', guessed: 0, started: false
       });
 
   let [minute, second] = HandleTimer(state.started)
