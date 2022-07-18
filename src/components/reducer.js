@@ -45,6 +45,11 @@ export function reducer(state, { type, char }) {
 
         case ACTIONS.ENTER:
             state.nextCity = state.nextCity.trim()
+
+            if(state.nextCity.length === 1){
+                return state;
+            }
+
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,

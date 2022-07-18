@@ -31,7 +31,7 @@ function App() {
       <div className="container">
         <div>
 
-          <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} />
+          <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
         </div>
         <div id="keyBoard">
           <Keyboard dispatch={dispatch} />

@@ -8,9 +8,11 @@ body{
 }
  
 #keyBoard{
-   display: none;
-} 
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+ } 
 
 .container{
     display: flex;
@@ -24,12 +26,7 @@ body{
     #footer{
         display: none;
     }
-    #keyBoard{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 5px;
-     } 
+    
      
 
 }
