@@ -13,8 +13,7 @@ function App() {
 
   let generatedCity = randCity(popularCities);
   let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
-  
-  
+
   const [state, dispatch] =
     useReducer(reducer,
       {
