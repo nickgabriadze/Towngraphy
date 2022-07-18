@@ -7,28 +7,15 @@ export function reducer(state, { type, char }) {
     switch (type) {
 
         case ACTIONS.ADD_LETTER:
-
-            if (char === ' ') {
-                return ({
-                    ...state,
-                    nextCity: state.nextCity + char,
-                    upper: true,
-                    message: ''
+            if(state.nextCity[state.nextCity.length - 1] === ' '){
+                return({
+                    ...state, nextCity: state.nextCity + char.toUpperCase()
                 })
-            }
-            if (state.upper === true) {
-                return ({
-                    ...state,
-                    nextCity: state.nextCity + char.toUpperCase(),
-                    upper: false,
-                    message: ''
-                });
             }
 
             return ({
                 ...state,
                 nextCity: state.nextCity + char,
-                upper: false,
                 message: ''
             });
 
