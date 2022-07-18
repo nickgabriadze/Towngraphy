@@ -7,8 +7,8 @@ export function reducer(state, { type, char }) {
     switch (type) {
 
         case ACTIONS.ADD_LETTER:
-            if(state.nextCity[state.nextCity.length - 1] === ' '){
-                return({
+            if (state.nextCity[state.nextCity.length - 1] === ' ') {
+                return ({
                     ...state, nextCity: state.nextCity + char.toUpperCase()
                 })
             }
@@ -33,20 +33,20 @@ export function reducer(state, { type, char }) {
         case ACTIONS.ENTER:
             state.nextCity = state.nextCity.trim()
 
-            if(state.nextCity.length === 1){
+            if (state.nextCity.length === 1) {
                 return state;
             }
 
-            if (!checkCity(cities, state.nextCity)) {
-                return ({
-                    ...state,
-                    message: 'Not In a City List!',
-                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
-                })
-            }
-            for(let i = 0; i < state.usedCities.length; i++){
-                if(state.usedCities[i] === state.nextCity){
-                    return({
+            // if (!checkCity(cities, state.nextCity)) {
+            //     return ({
+            //         ...state,
+            //         message: 'Not In a City List!',
+            //         nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+            //     })
+            // }
+            for (let i = 0; i < state.usedCities.length; i++) {
+                if (state.usedCities[i] === state.nextCity) {
+                    return ({
                         ...state,
                         message: "You already said that one!"
                     })
@@ -54,7 +54,7 @@ export function reducer(state, { type, char }) {
             }
             let currentCity = state.nextCity
             let nextOne = currentCity[currentCity.length - 2].toUpperCase()
-           
+
             return ({
                 ...state,
                 randomCity: currentCity,
@@ -64,6 +64,24 @@ export function reducer(state, { type, char }) {
                 usedCities: [...state.usedCities, currentCity]
 
             });
+        case ACTIONS.START_TIMER:
+            if (!state.started) return state;
+
+
+            if (state.minutes === 0 & state.seconds === 0) {
+                return ({
+                    ...state,
+                    message: 'Over',
+                    started: false
+                })
+            }
+
+            return ({
+                ...state,
+                minutes: state.minutes,
+                seconds: char
+            })
+
 
         default: return state;
     }
