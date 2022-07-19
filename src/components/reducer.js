@@ -7,14 +7,14 @@ export function reducer(state, { type, char }) {
     switch (type) {
 
         case ACTIONS.ADD_LETTER:
-            if(state.gameOver) return state;
+            if (state.gameOver) return state;
 
             if (state.nextCity[state.nextCity.length - 1] === ' ') {
                 return ({
                     ...state, nextCity: state.nextCity + char.toUpperCase()
                 })
             }
-            
+
             return ({
                 ...state,
                 nextCity: state.nextCity + char,
@@ -22,7 +22,7 @@ export function reducer(state, { type, char }) {
             });
 
         case ACTIONS.REMOVE_LETTER:
-            if(state.gameOver) return state;
+            if (state.gameOver) return state;
             if (state.nextCity.length === 1) {
                 return state;
             };
@@ -33,7 +33,7 @@ export function reducer(state, { type, char }) {
             });
 
         case ACTIONS.ENTER:
-            if(state.gameOver) return state;
+            if (state.gameOver) return state;
             state.nextCity = state.nextCity.trim()
 
             if (state.nextCity.length === 1) {
@@ -43,7 +43,7 @@ export function reducer(state, { type, char }) {
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
-                    message: 'Not In a City List!',
+                    message: "You made it up for sure!",
                     nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
                 })
             }
@@ -64,34 +64,36 @@ export function reducer(state, { type, char }) {
                 nextCity: nextOne,
                 started: true,
                 guessed: state.guessed + 1,
-                usedCities: [...state.usedCities, currentCity]
+                usedCities: [...state.usedCities, currentCity],
 
             });
         case ACTIONS.START_TIMER:
             if (!state.started) return state;
 
-            if(state.seconds){
-                return({
+            if (state.seconds) {
+                return ({
                     ...state,
-                    seconds: state.seconds -1
+                    seconds: state.seconds - 1
                 })
-            }else 
-            if(state.minutes){
-                return({
+            }
+            if (state.minutes) {
+                return ({
                     ...state,
-                    minutes: state.minutes -1,
+                    minutes: state.minutes - 1,
                     seconds: 59
                 })
-            }else{
-                return({
-
-                        ...state,
-                        message: 'Over',
-                        started: false,
-                        gameOver: true,
-                        nextCity: ''
-                    })
             }
+            if (state.minutes === 0 & state.seconds === 0) {
+                return ({
+                    ...state,
+                    message: 'OVER!',
+                    started: false,
+                    gameOver: true,
+                    nextCity: ''
+                })
+            }
+            break;
+
 
         default: return state;
     }
