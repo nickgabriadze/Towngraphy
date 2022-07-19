@@ -1,4 +1,4 @@
-import React, { useReducer} from 'react';
+import React, { useEffect, useReducer } from 'react';
 import './App.css';
 import { Footer } from './components/footer.js';
 import { Keyboard } from './components/keyboard.js';
@@ -17,20 +17,20 @@ function App() {
     useReducer(reducer,
       {
         randomCity: generatedCity, nextCity: nextCity,
-        message: '', guessed: 0, started: false, usedCities: [], minutes: 1, seconds: 20
+        message: '', guessed: 0, started: false, usedCities: [],
+        minutes: 1, seconds: 20
       });
 
-  
+  useEffect(() => {
     const myInterval = setInterval(() => {
-      clearInterval(myInterval)
-      if(state.started){
-      dispatch({ type: "START_TIMER", char: state.seconds < 1 ? 59:state.seconds - 1})
-      }
+
+        dispatch({ type: "START_TIMER" })
       
     }, 1000)
-  
-
-
+    return () => {
+      clearInterval(myInterval);
+    }
+  })
 
 
   let formattedMinute = state.minutes > 9 ? state.minutes : `0${state.minutes}`
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <Timerwithscore minute={formattedMinute} second={formattedSecond} guessed={state.guessed} />
+      <Timerwithscore minute={formattedMinute} second={formattedSecond} guessed={state.guessed} dispatch={dispatch} />
       <div className="container">
         <div>
 

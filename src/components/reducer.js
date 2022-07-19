@@ -12,7 +12,7 @@ export function reducer(state, { type, char }) {
                     ...state, nextCity: state.nextCity + char.toUpperCase()
                 })
             }
-
+            
             return ({
                 ...state,
                 nextCity: state.nextCity + char,
@@ -67,21 +67,26 @@ export function reducer(state, { type, char }) {
         case ACTIONS.START_TIMER:
             if (!state.started) return state;
 
-
-            if (state.minutes === 0 & state.seconds === 0) {
-                return ({
+            if(state.seconds){
+                return({
                     ...state,
-                    message: 'Over',
-                    started: false
+                    seconds: state.seconds -1
                 })
+            }else 
+            if(state.minutes){
+                return({
+                    ...state,
+                    minutes: state.minutes -1,
+                    seconds: 59
+                })
+            }else{
+                return({
+
+                        ...state,
+                        message: 'Over',
+                        started: false
+                    })
             }
-
-            return ({
-                ...state,
-                minutes: state.minutes,
-                seconds: char
-            })
-
 
         default: return state;
     }
