@@ -7,6 +7,8 @@ export function reducer(state, { type, char }) {
     switch (type) {
 
         case ACTIONS.ADD_LETTER:
+            if(state.gameOver) return state;
+
             if (state.nextCity[state.nextCity.length - 1] === ' ') {
                 return ({
                     ...state, nextCity: state.nextCity + char.toUpperCase()
@@ -20,7 +22,7 @@ export function reducer(state, { type, char }) {
             });
 
         case ACTIONS.REMOVE_LETTER:
-
+            if(state.gameOver) return state;
             if (state.nextCity.length === 1) {
                 return state;
             };
@@ -31,19 +33,20 @@ export function reducer(state, { type, char }) {
             });
 
         case ACTIONS.ENTER:
+            if(state.gameOver) return state;
             state.nextCity = state.nextCity.trim()
 
             if (state.nextCity.length === 1) {
                 return state;
             }
 
-            // if (!checkCity(cities, state.nextCity)) {
-            //     return ({
-            //         ...state,
-            //         message: 'Not In a City List!',
-            //         nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
-            //     })
-            // }
+            if (!checkCity(cities, state.nextCity)) {
+                return ({
+                    ...state,
+                    message: 'Not In a City List!',
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                })
+            }
             for (let i = 0; i < state.usedCities.length; i++) {
                 if (state.usedCities[i] === state.nextCity) {
                     return ({
@@ -84,7 +87,9 @@ export function reducer(state, { type, char }) {
 
                         ...state,
                         message: 'Over',
-                        started: false
+                        started: false,
+                        gameOver: true,
+                        nextCity: ''
                     })
             }
 

@@ -18,19 +18,19 @@ function App() {
       {
         randomCity: generatedCity, nextCity: nextCity,
         message: '', guessed: 0, started: false, usedCities: [],
-        minutes: 1, seconds: 20
+        minutes: 0, seconds: 10, gameOver: false
       });
 
   useEffect(() => {
     const myInterval = setInterval(() => {
 
-        dispatch({ type: "START_TIMER" })
+        dispatch({ type: "START_TIMER"})
       
     }, 1000)
     return () => {
       clearInterval(myInterval);
     }
-  })
+  },[state.seconds])
 
 
   let formattedMinute = state.minutes > 9 ? state.minutes : `0${state.minutes}`
