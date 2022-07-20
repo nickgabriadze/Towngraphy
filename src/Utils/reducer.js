@@ -1,8 +1,8 @@
-import { ACTIONS } from "../actions.js";
-import { checkCity } from "../checkOrGive/checkCity.js";
-import { cities } from "../cities.js";
-import {randCity} from "../checkOrGive/randomCity.js";
-import { popularCities } from "../cities.js";
+import { ACTIONS } from "./actions.js";
+import { checkCity } from "../CheckOrGenerate/checkCity.js";
+import { cities } from "./cities.js";
+import {randCity} from "../CheckOrGenerate/randomCity.js";
+import { popularCities } from "./cities.js";
 
 export function reducer(state, { type, char }) {
 
@@ -95,7 +95,8 @@ export function reducer(state, { type, char }) {
                     nextCity: ''
                 })
             }
-        case ACTIONS.RESTART:
+            break;
+        case ACTIONS.PLAY_AGAIN:
 
             let generatedCity = randCity(popularCities);
             let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
@@ -107,7 +108,7 @@ export function reducer(state, { type, char }) {
                 message: '', guessed: 0, started: false, usedCities: [],
                 minutes: 1, seconds: 20, gameOver: false
             })
-
+          
 
 
         default: return state;

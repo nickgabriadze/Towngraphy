@@ -5,5 +5,5 @@ export const ACTIONS = {
     RESTART:"RESTART",
     GAME_OVER: "GAME_OVER",
     START_TIMER: 'START_TIMER',
-    RESTART: "RESTART",
+    PLAY_AGAIN: "RESTART",
 }

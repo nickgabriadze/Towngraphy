@@ -9,7 +9,6 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
         if (e.key === 'Backspace' || e.key === 'Delete') {
             dispatch({ type: "REMOVE_LETTER" })
         }
-
         if(e.key === 'q'){
             dispatch({type: "ADD_LETTER", char:'q'})
         }

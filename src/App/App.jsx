@@ -1,14 +1,14 @@
 import React, { useEffect, useReducer } from 'react';
 import './App.css';
-import { Footer } from './components/footer.js';
-import { Keyboard } from './components/keyboard.js';
-import { TextBox } from './components/textBox';
-import { randCity } from './checkOrGive/randomCity.js'
-import { popularCities } from './cities.js';
-import { Timerwithscore } from './components/timer.js';
-import { reducer } from './components/reducer.js';
-import {HowTo} from './components/howToInstruction.jsx';
-import {PopUp} from './components/popUp.jsx';
+import { Footer } from '../Components/footer/footer.js';
+import { Keyboard } from '../Components/keyboard/keyboard.js';
+import { TextBox } from '../Components/textBox/textBox.js';
+import { randCity } from '../CheckOrGenerate/randomCity.js'
+import { popularCities } from '../Utils/cities.js';
+import { Timerwithscore } from '../Components/timer/timer.js';
+import { reducer } from '../Utils/reducer.js';
+import { HowTo } from '../Components/howTo/howToInstruction.jsx';
+import { PopUp } from '../Components/gameOverPopUp/popUp.jsx';
 
 function App() {
 
