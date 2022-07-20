@@ -8,7 +8,7 @@ import { popularCities } from '../Utils/cities.js';
 import { Timerwithscore } from '../Components/Timer/timer.js';
 import { reducer } from '../Utils/reducer.js';
 import { HowTo } from '../Components/HowTo/howToInstruction.jsx';
-import { PopUp } from '../Components/GameOverPopUp/popUp.jsx'
+import { PopUp } from '../Components/GameOverPopUp/popUp'
 
 function App() {
 
