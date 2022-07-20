@@ -41,7 +41,7 @@ export function reducer(state, { type, char }) {
             if (state.nextCity.length === 1) {
                 return state;
             }
-            
+
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
@@ -97,7 +97,7 @@ export function reducer(state, { type, char }) {
                 })
             }
             break;
-        case ACTIONS.PLAY_AGAIN:
+        case ACTIONS.RESTART:
 
             let generatedCity = randCity(popularCities);
             let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
