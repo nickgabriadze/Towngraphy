@@ -42,13 +42,13 @@ export function reducer(state, { type, char }) {
                 return state;
             }
 
-            // if (!checkCity(cities, state.nextCity)) {
-            //     return ({
-            //         ...state,
-            //         message: "You made it up for sure!",
-            //         nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
-            //     })
-            // }
+            if (!checkCity(cities, state.nextCity)) {
+                return ({
+                    ...state,
+                    message: "You made it up for sure!",
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                })
+            }
 
             for (let i = 0; i < state.usedCities.length; i++) {
                 if (state.usedCities[i] === state.nextCity) {
