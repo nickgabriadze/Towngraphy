@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 
 export function PopUp({guessed, dispatch}) {
 
-    let numberOfCities = guessed > 1 ? 'cities/ccountries': 'city/country'
+    let numberOfCities = guessed > 1 ? 'cities/countries': 'city/country'
     const handleRestart = (e) =>{
         if(e.key === 'r'){
             dispatch({type:"RESTART"})
