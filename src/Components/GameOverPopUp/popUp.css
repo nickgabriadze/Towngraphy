@@ -36,3 +36,17 @@
     right: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 500px){
+    #popUp-box{
+        width: 20rem;
+        height: 20rem;
+        top:40%;
+    }
+}
+
+@media (max-width: 400px){
+    #popUp-box{
+        top: 50%;
+    }
+}

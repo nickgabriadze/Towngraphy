@@ -49,7 +49,7 @@ button:focus {
 }
 
 
-@media (max-width:480px) {
+@media (max-width:500px) {
     #enter-button {
         width: 4rem;
     }

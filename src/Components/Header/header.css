@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+#menu-name {
+    display: none;
+}
+
+#after-click {
+    display: none;
+}
+
+@media (max-width:500px) {
+    #header-box {
+        position: relative;
+        background-color: rgb(59, 59, 59);
+        width: 100%;
+        height: 3.6rem;
+        font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+        color: white;
+    }
+
+    #menu-name {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+    }
+
+    #website-name {
+        text-align: center;
+        padding-top: 5px;
+        padding-right: 3px;
+        font-size: 25px;
+    }
+
+    #hamburger-menu {
+        font-size: 38px;
+        padding: 10px;
+    }
+
+    #after-click {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    #envelope,
+    #copyright-logo {
+        text-decoration: none;
+        background-color: none;
+        color: #921d1d;
+        font-size: 38px;
+        color: white;
+
+    }
+
+    #copyright-logo {
+        padding-right: 10px;
+        font-size: 35px;
+    }
+
+    #question-mark {
+        padding-right: 8px;
+        font-size: 38px;
+
+    }
+
+    #explanation {
+        background-color: #9d9d9d;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        padding: 0px;
+        width: 180px;
+        height: auto;
+        font-size: 10px;
+        font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        cursor: pointer;
+    }
+
+    #explanation-box {
+        padding-top: 4px;
+    }
+
+}

@@ -27,6 +27,8 @@ body{
     align-items: center;
 }
 
+
+
 @media (max-width: 480px){
     #footer{
         display: none;
@@ -37,6 +39,17 @@ body{
         align-items: center;
         padding-top: 5px;
      } 
+     #how-to-box{
+        display:none;
+     }
+
+     #score-howTo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+     }
+     
      
 
 }
