@@ -7,15 +7,17 @@ const stylesForRed ={
     'fontWeight': 'bold'
 }
 const stylesForNormal ={
-    'color': '626c76',
-    'fontWeight': 'bold',
+    'color': '#92abba',
+    'fontWeight': 'bold'
 }
+
 
 export function Timerwithscore({ minute, second, guessed }) {
 
     let formattedMinute = minute > 9 ? minute : `0${minute}`
     let formattedSecond = second > 9 ? second : `0${second}`
-  
+    
+    
 
     return (
         <>

@@ -1,6 +1,8 @@
 import { ACTIONS } from "../actions.js";
 import { checkCity } from "../checkOrGive/checkCity.js";
 import { cities } from "../cities.js";
+import {randCity} from "../checkOrGive/randomCity.js";
+import { popularCities } from "../cities.js";
 
 export function reducer(state, { type, char }) {
 
@@ -40,13 +42,14 @@ export function reducer(state, { type, char }) {
                 return state;
             }
 
-            if (!checkCity(cities, state.nextCity)) {
-                return ({
-                    ...state,
-                    message: "You made it up for sure!",
-                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
-                })
-            }
+            // if (!checkCity(cities, state.nextCity)) {
+            //     return ({
+            //         ...state,
+            //         message: "You made it up for sure!",
+            //         nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+            //     })
+            // }
+
             for (let i = 0; i < state.usedCities.length; i++) {
                 if (state.usedCities[i] === state.nextCity) {
                     return ({
@@ -92,7 +95,19 @@ export function reducer(state, { type, char }) {
                     nextCity: ''
                 })
             }
-            break;
+        case ACTIONS.RESTART:
+
+            let generatedCity = randCity(popularCities);
+            let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
+           
+
+            return ({
+                ...state,
+                randomCity: generatedCity, nextCity: nextCity,
+                message: '', guessed: 0, started: false, usedCities: [],
+                minutes: 1, seconds: 20, gameOver: false
+            })
+
 
 
         default: return state;

@@ -8,6 +8,7 @@ import { popularCities } from './cities.js';
 import { Timerwithscore } from './components/timer.js';
 import { reducer } from './components/reducer.js';
 import {HowTo} from './components/howToInstruction.jsx';
+import {PopUp} from './components/popUp.jsx';
 
 function App() {
 
@@ -33,9 +34,12 @@ function App() {
     }
   },[state.seconds])
 
-
+  const popUp = <PopUp guessed={state.guessed} dispatch={dispatch} />
   return (
     <>
+
+    {state.gameOver? popUp : ''}
+
     <div id='score-howTo'>
       <HowTo />
       <Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} />
