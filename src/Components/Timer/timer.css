@@ -2,12 +2,14 @@
 
 
 .timer{
-    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
     text-align: center;
     color: #626c76;
+    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }
 
 #time{
     color: #92abba;
     font-size: 3rem;
+
+    font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }

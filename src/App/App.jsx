@@ -9,7 +9,7 @@ import { Timerwithscore } from '../Components/Timer/timer.js';
 import { reducer } from '../Utils/reducer.js';
 import { HowTo } from '../Components/HowTo/howToInstruction.jsx';
 import { PopUp } from '../Components/GameOverPopUp/popUp'
-import {Header} from '../Components/Header/header.jsx';
+// import {Header} from '../Components/Header/header.jsx';
 
 
 
@@ -43,7 +43,7 @@ function App() {
 
     {state.gameOver? popUp : ''}
 
-    <Header />
+    {/* <Header /> */}
     <div id='score-howTo'>
       <HowTo id="how-to-box"/>
       <Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} />

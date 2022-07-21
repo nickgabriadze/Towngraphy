@@ -22,7 +22,6 @@ export function HowTo() {
 
     const handleClick = () => {
         clicked ? setClicked(false) : setClicked(true);
-        console.log(clicked)
     }
 
     return (

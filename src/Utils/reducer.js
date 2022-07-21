@@ -9,6 +9,8 @@ export function reducer(state, { type, char }) {
     switch (type) {
 
         case ACTIONS.ADD_LETTER:
+        
+
             if (state.gameOver) return state;
 
             if (state.nextCity[state.nextCity.length - 1] === ' ') {

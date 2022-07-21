@@ -10,7 +10,6 @@
 }
 
 #box-for-input {
-    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
     border-radius: 3px;
     font-size: 25px;
     background-color: #ebeded;
@@ -22,6 +21,7 @@
     border-color: #a4bdcb;
     overflow: hidden;
     box-shadow: 2px 2px #a4bdcb;
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
 #answer {
@@ -32,16 +32,9 @@
 #pre-defined {
     color: #262a2c;
     padding-bottom: 5px;
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
 #message {
     padding-top: 10px;
-}
-
-@media (max-width: 500px) {
-    #box-for-input{
-        height: 2.42rem;
-        width: 18rem;
-        font-size:20px
-    }
 }

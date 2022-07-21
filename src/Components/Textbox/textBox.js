@@ -114,12 +114,12 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
             <div className="textBox">
                 <motion.h1
                     animate={{ opacity: [0, 0.1, 0.3, 0.5, 0.8, 1] }}
-                    style={randomCity.length > 30 ? { 'fontSize': '15px' } : { 'fontSize': '25px' }} id="pre-defined">{randomCity}</motion.h1>
+                    id="pre-defined">{randomCity}</motion.h1>
 
                 <div id='box-for-input'>
                     <motion.p
                         animate={{ opacity: [0, 0.1, 0.3, 0.5, 0.8, 1] }} 
-                        style={thatLetter.length > 30 ? { 'fontSize': '15px','paddingTop': '6px', 'fontWeight': '400', 'overflow': 'hidden'} : { 'fontSize': '25px' }}
+                        
                         id="answer">{thatLetter}</motion.p>
                 </div>
                 <p id="message">{message}</p>
