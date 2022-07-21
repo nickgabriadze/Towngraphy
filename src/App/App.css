@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5px;
+    padding: 0;
  } 
 #score-howTo{
     display: flex;
@@ -27,6 +27,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -39,7 +40,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 5px;
+        padding-top: 100px;
      } 
      #how-to-box{
         display:none;

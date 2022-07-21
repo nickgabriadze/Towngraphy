@@ -37,3 +37,17 @@
 #message {
     padding-top: 10px;
 }
+
+
+@media (max-width: 380px){
+    #box-for-input{
+       width: 20rem;
+        
+    }
+}
+
+@media(max-width: 450px){
+    #box-for-input{
+        width: 22rem;
+    }
+}

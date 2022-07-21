@@ -8,7 +8,7 @@ export function Keyboard({ dispatch }) {
     return (
         <>
             <div className="keyboard-grid">
-                <div id="first-row">
+                
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => dispatch({ type: "ADD_LETTER", char: 'q' })}>Q</motion.button>
@@ -39,9 +39,9 @@ export function Keyboard({ dispatch }) {
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => dispatch({ type: "ADD_LETTER", char: 'p' })}>P</motion.button>
-                </div>
+           
 
-                <div id="second-row">
+               
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => dispatch({ type: "ADD_LETTER", char: 'a' })}>A</motion.button>
@@ -72,11 +72,8 @@ export function Keyboard({ dispatch }) {
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => dispatch({ type: "ADD_LETTER", char: '-' })}>-</motion.button>
-                </div>
-
-
-                <div id="third-row">
-                    <motion.button whileHover={{ scale: 1.1 }}
+               
+                    <motion.button whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</motion.button>
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</motion.button>
@@ -94,12 +91,11 @@ export function Keyboard({ dispatch }) {
                         whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'm' })}>M</motion.button>
                     <motion.button whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft}/></motion.button>
-                </div>
-                <div id="fourth-row">
+                
                     <motion.button whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.96 }} id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</motion.button>
                 </div>
-            </div>
+            
         </>
     );
 };

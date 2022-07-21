@@ -5,9 +5,8 @@ button {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    width: 3rem;
-    height: 3rem;
     text-decoration: none;
+    height: 3rem;
     border: 2px solid #ebeeef;
     background-color: #a4bdcb;
     font-size: 15px;
@@ -22,30 +21,60 @@ button:focus {
 
 
 .keyboard-grid {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    
+    
 }
 
-#first-row {
 
-    padding-bottom: 0.2px;
-}
-
-#second-row {
-    padding-top: 0.5px;
-}
-
-#third-row {
-    padding-top: 0.5px;
-}
 
 #enter-button {
-    width: 6rem;
+    grid-column: span 2;
+    width: 100%;
 }
 
 #space {
+    grid-column: span 10;
     width: 100%;
 }
 
 
+
+
+@media (min-width: 410px) and (max-width: 451px){
+
+   button{
+    font-size: 15px;
+    height: 3rem;
+   }
+   .keyboard-grid{
+    grid-template-columns: repeat(10, 42.5px);
+   }
+  
+}
+
+@media (min-width: 350px) and (max-width: 409px){
+
+    button{
+     font-size: 15px;
+     height: 3.5rem;
+    }
+    .keyboard-grid{
+     grid-template-columns: repeat(10, 39px);
+    }
+   
+ }
+
+ @media (min-width: 300px) and (max-width: 349px){
+
+    button{
+     font-size: 15px;
+     height: 3.5rem;
+    }
+
+    .keyboard-grid{
+     grid-template-columns: repeat(10, 1fr);
+    }
+   
+ }
