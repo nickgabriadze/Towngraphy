@@ -46,3 +46,9 @@ a {
     padding-right: 2px;
 }
 
+
+@media (mix-width: 450px){
+    .footer-container{
+        display: none;
+    }
+}
