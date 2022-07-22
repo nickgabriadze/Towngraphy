@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+#header-main{
+    display: none;
+}
+#after-open{
+    display: none;
+}
 
-
-@media (max-width:1200px) {
+@media (max-width:400px) {
     
     #header-main, #after-open{
         background-color: black;
