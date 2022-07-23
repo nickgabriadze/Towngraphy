@@ -2,7 +2,7 @@ import React from 'react';
 import './keyboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
-import { motion } from "framer-motion";
+import {motion} from 'framer-motion/dist/framer-motion'
 export function Keyboard({ dispatch }) {
 
     return (
