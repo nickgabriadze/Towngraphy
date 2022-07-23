@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App/App.jsx'
-import { PrivacyPolicy } from './App/PrivacyPolicy.js';
+import {PrivacyPolicy} from './App/PrivacyPolicy.jsx';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

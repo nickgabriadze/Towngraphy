@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Link } from "react-router-dom";
 import {faBars, faAngleLeft, faCopyright, faEnvelope, faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 import {motion} from 'framer-motion/dist/framer-motion'
+
 export function Header() {
     const [opened, setOpened] = useState(false);
 
@@ -55,7 +56,7 @@ export function Header() {
     rotate: 0
   }} onClick={() => setOpened(!opened)}><FontAwesomeIcon id="hamburger-menu-opened" icon={faAngleLeft} /></motion.div>
     <motion.div animate={{x: [-700, 0]}}  transition={{ type: "spring", stiffness: 100 }}  id="mail"><FontAwesomeIcon icon={faEnvelope} /></motion.div>
-    <motion.div animate={{x: [-500, 0]}}  transition={{ type: "spring", stiffness: 100 }}><FontAwesomeIcon id="copyright-logo" icon={faCopyright}/></motion.div>
+    <motion.div animate={{x: [-500, 0]}}  transition={{ type: "spring", stiffness: 100 }}><Link to="/privacy-policy"><FontAwesomeIcon id="copyright-logo" icon={faCopyright}/></Link></motion.div>
     </motion.div>
     </>
   

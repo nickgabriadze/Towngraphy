@@ -10,7 +10,6 @@ body{
     background-color: #f5f5f5;
 }
  
-
  
 #score-howTo{
     display: flex;
@@ -24,28 +23,33 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
+}
+
+#duplicate-timer {
+    display: none;
 }
 
 
+
+
+
 @media (max-width: 480px){
+
     #footer{
         display: none;
     }
-}
-@media (max-width: 480px){
-   
-  
-
-     #how-to-box{
-        display:none;
-     }
 
      #score-howTo{
+        display:none;
+     }
+     #duplicate-timer{
         display: flex;
-        justify-content: center;
         align-items: center;
-        padding-top: 50px;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 20%;
+        
      }
      
 
