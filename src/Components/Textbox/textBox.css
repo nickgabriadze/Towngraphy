@@ -35,12 +35,13 @@
     color: #262a2c;
     padding-bottom: 5px;
     text-align: center;
-    width: 200px;
+    width: 250px;
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
 #message {
-    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial NarrowCourier New', 'Courier', 'monospace', 'sans-serif';
 }
 

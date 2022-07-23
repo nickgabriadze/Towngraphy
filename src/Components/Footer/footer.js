@@ -3,7 +3,7 @@ import './footer.css';
 import 'font-awesome/css/font-awesome.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright, faEnvelope} from '@fortawesome/free-regular-svg-icons';
-
+import { Link } from "react-router-dom";
 export function Footer() {
     return (
         <>
@@ -19,7 +19,7 @@ export function Footer() {
 
                     <div id="copyright-logo-with-text">
                         <FontAwesomeIcon id="copyright-logo" icon={faCopyright} />
-                        All Rights Reserved
+                        <Link to="/privacy-policy">Privacy Policy</Link>
                     </div>
                 </div>
             </div>
