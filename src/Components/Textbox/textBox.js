@@ -122,8 +122,8 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
                         
                         id="answer">{thatLetter}</motion.p>
                 </div>
-                <p id="message">{message}</p>
             </div>
+            <p id="message">{message}</p>
         </>
     )
 };

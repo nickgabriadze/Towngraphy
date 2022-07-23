@@ -7,6 +7,9 @@ export function Keyboard({ dispatch }) {
 
     return (
         <>
+        <div id="keyboard">
+            
+    
             <div className="keyboard-grid">
 
                 <motion.button whileHover={{ scale: 1.1 }}
@@ -124,7 +127,7 @@ export function Keyboard({ dispatch }) {
                     onMouseDown={(e) => e.preventDefault()}
                     whileTap={{ scale: 0.96 }} id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</motion.button>
             </div>
-
+            </div>
         </>
     );
 };

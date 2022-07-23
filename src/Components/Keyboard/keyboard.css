@@ -10,8 +10,14 @@ button {
     background-color: #a4bdcb;
     font-size: 15px;
     font-family:'Poppins', 'sans-serif';
-  
-
+    
+}
+#keyboard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 button:focus {
@@ -22,10 +28,11 @@ button:focus {
 
 .keyboard-grid {
     display: grid;
-    grid-gap: 1px;
-    grid-template-columns: repeat(10, 3.2rem);
-    grid-template-rows: repeat(4, 3rem);
     
+  
+    grid-template-columns: repeat(10,minmax(3rem,1fr));
+    grid-template-rows: repeat(4,minmax(3rem, 1fr));
+   
 }
 
 
@@ -38,4 +45,61 @@ button:focus {
 #space {
     grid-column: span 10;
     width: 100%;
+}
+
+
+@media screen and (max-width: 480px){
+    #keyboard{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .keyboard-grid{
+  
+    grid-template-columns: repeat(10,minmax(2.3rem,3rem));
+    grid-template-rows: repeat(4,minmax(2.5rem, 3rem));
+   
+    }
+    button{
+        font-size: 18px;    
+    }
+
+    
+}
+
+@media screen and (max-width: 380px){
+    #keyboard{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .keyboard-grid{
+  
+    grid-template-columns: repeat(10,minmax(2rem,2.5rem));
+    grid-template-rows: repeat(4,minmax(1.7rem, 2.7rem));
+   
+    }
+    button{
+        font-size: 15px;    
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    #keyboard{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .keyboard-grid{
+
+    grid-template-columns: repeat(10,minmax(1.7rem,2.6rem));
+    grid-template-rows: repeat(4,minmax(1.5rem, 2.5rem));
+   
+    }
+    button{
+        font-size: 12px;   
+
+    }
+
 }

@@ -48,15 +48,16 @@ function App() {
       <HowTo id="how-to-box"/>
       <Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} />
       </div>  
+      
       <div className="container">
         <div>
           <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
         </div>
-        <div id="keyBoard">
+        <div id="keyBrd">
           <Keyboard dispatch={dispatch} />
         </div>
       </div>
-
+      
       <div id='footer'>
         <Footer />
       </div>

@@ -10,12 +10,11 @@
 }
 
 #box-for-input {
-    border-radius: 3px;
-    font-size: 25px;
+    border-radius: 3px;   
     background-color: #ebeded;
     list-style: none;
     height: 2.5rem;
-    width: 25rem;
+    width:25rem;
     border-style: solid;
     font-weight: 300;
     border-color: #a4bdcb;
@@ -25,29 +24,31 @@
 }
 
 #answer {
+    display: flex;
     padding-left: 3px;
+    justify-items: center;
+    font-size: 25px;
+
 }
 
 #pre-defined {
     color: #262a2c;
     padding-bottom: 5px;
+    text-align: center;
+    width: 200px;
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
 #message {
     padding-top: 10px;
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial NarrowCourier New', 'Courier', 'monospace', 'sans-serif';
 }
 
 
-@media (max-width: 380px){
+@media screen and (max-width: 480px){
     #box-for-input{
-       width: 20rem;
-        
+        width: 100%;
+       
     }
 }
 
-@media(max-width: 450px){
-    #box-for-input{
-        width: 22rem;
-    }
-}

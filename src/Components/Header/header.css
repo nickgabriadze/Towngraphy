@@ -7,10 +7,10 @@
     display: none;
 }
 
-@media (max-width:400px) {
+@media (max-width:480px) {
     
     #header-main, #after-open{
-        background-color: black;
+        background-color: #899da9;
         width: 100%;
         height: 4rem;
         display: flex;
@@ -18,7 +18,10 @@
         justify-content: space-between;
         padding-left: 5px;
         padding-right: 5px;
-        
+        box-shadow: 0 0 2px 2px rgb(164, 136, 136);
+        flex-grow: 1;
+        border-bottom-left-radius: 5px;     
+        border-bottom-right-radius: 5px;           
     }
 
     #hamburger-menu,#hamburger-menu-opened, #mail, #copyright-logo{
@@ -57,6 +60,7 @@
         font-size: 10px;
         font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
         cursor: pointer;
+       
     }
 
     #explanation-box {
