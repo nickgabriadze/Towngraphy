@@ -50,10 +50,11 @@ function App() {
       </div>  
       
       <div className="container">
-        
+
+          
           <div id="duplicate-timer" ><Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> </div>
           <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
-        
+      
         <div id="keyBrd">
           <Keyboard dispatch={dispatch} />
         </div>
