@@ -55,7 +55,7 @@
     #q-mark{
         color: white;
         font-size: 2rem;
-        margin-top: 10px;
+        margin-top: 15px;
     }
 
     #website-name, #hamburger-menu, #hamburger-menu-opened, #copyright-logo, #mail{
@@ -91,5 +91,14 @@
         outline: 2px solid black;
         border: none;
         text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width: 320px){
+    #website-name{
+        font-size: 1.5rem;
+        padding-top: 12px;
     }
 }
