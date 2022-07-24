@@ -111,7 +111,7 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
 
     return (
         <>
-            <div id="entire-textBox">
+            <div className="entire-textBox">
                 <div className="textBox">
                     <motion.h1
                         animate={{ opacity: [0, 0.1, 0.3, 0.5, 0.8, 1] }}

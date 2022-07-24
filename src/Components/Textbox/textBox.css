@@ -45,7 +45,12 @@
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial NarrowCourier New', 'Courier', 'monospace', 'sans-serif';
 }
 
-
+.entire-textBox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 @media screen and (max-width: 480px){
     #box-for-input{
