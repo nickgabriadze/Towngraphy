@@ -5,7 +5,7 @@ export function checkCity(dict, city){
 
 
     for(let i = 0; i < LenOfThatCharValue; i++) {
-        if(dict[FirstLetter][i] === city){
+        if(dict[FirstLetter][i] === city.toLowerCase()){
             return true;
         }    
     }
