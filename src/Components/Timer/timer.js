@@ -1,6 +1,6 @@
 import React from "react";
 import './timer.css';
-import {motion} from 'framer-motion/dist/framer-motion'
+import {motion} from 'framer-motion';
 
 const stylesForRed ={
     'color': '#F90B31',
