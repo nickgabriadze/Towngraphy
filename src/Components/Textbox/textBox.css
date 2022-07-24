@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 .textBox {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-size: 16px;
     font-weight: 100;
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
@@ -45,17 +47,19 @@
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial NarrowCourier New', 'Courier', 'monospace', 'sans-serif';
 }
 
-.entire-textBox{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 @media screen and (max-width: 480px){
     #box-for-input{
         width: 100%;
        
+    }
+
+    .entire-textBox{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

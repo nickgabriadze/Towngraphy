@@ -4,6 +4,8 @@ import 'font-awesome/css/font-awesome.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright, faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import { Link } from "react-router-dom";
+
+
 export function Footer() {
     return (
         <>

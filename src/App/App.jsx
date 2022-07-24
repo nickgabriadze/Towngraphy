@@ -9,7 +9,7 @@ import { Timerwithscore } from '../Components/Timer/timer.js';
 import { reducer } from '../Utils/reducer.js';
 import { HowTo } from '../Components/HowTo/howToInstruction.jsx';
 import { PopUp } from '../Components/GameOverPopUp/popUp'
-import {Header} from '../Components/Header/header.jsx';
+import { Header } from '../Components/Header/header.jsx';
 
 
 
@@ -51,8 +51,6 @@ function App() {
       </div>  
       
       <div className="container">
-
-          
           {window.innerWidth <= 480? <div id="duplicate-timer" ><Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> </div> : ''}
           <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
       
