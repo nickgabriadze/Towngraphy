@@ -7,6 +7,10 @@
     display: none;
 }
 
+#explain-for-mobile{
+    display: none;
+}
+
 @media (max-width:480px) {
     
     #header-main, #after-open{
@@ -22,6 +26,19 @@
         flex-grow: 1;
         border-bottom-left-radius: 5px;     
         border-bottom-right-radius: 5px;           
+    }
+
+    #explain-for-mobile{
+        display:block;
+    }
+
+    #pointerArrow{
+        transform: rotate(40deg);
+        font-size: 2rem;
+        color: white;
+        margin-right: 10px;
+        margin-top: 10px;
+        
     }
 
     #hamburger-menu,#hamburger-menu-opened, #mail, #copyright-logo{
@@ -47,24 +64,32 @@
     #after-clicked{
         margin: 10px;
     }
+    
+    .explain-mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: #a4bdcb;
+        z-index: 2;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+    }
 
-    #explanation {
-        background-color: #9d9d9d;
+    #close-explanation{
+        font-size: 1rem;
+        margin-top: 30px;
+        width: fit-content;
+        outline: 2px solid black;
+        border: none;
         text-align: center;
-        color: rgb(255, 255, 255);
-        border-radius: 5px;
-        padding-top: 0;
-        margin-top: 2px;
-        width: 1fr;
-        height: auto;
-        font-size: 10px;
-        font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-        cursor: pointer;
-       
     }
-
-    #explanation-box {
-        padding-top: 4px;
-    }
-
 }

@@ -124,7 +124,7 @@ export function reducer(state, { type, char }) {
                 message: '', guessed: 0, started: false, usedCities: [],
                 minutes: 1, seconds: 20, gameOver: false
             })
-          
+       
 
 
         default: return state;

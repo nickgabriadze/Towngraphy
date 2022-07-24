@@ -3,7 +3,6 @@ import './textBox.css';
 import { motion } from 'framer-motion';
 
 export function TextBox({ randomCity, thatLetter, message, dispatch }) {
-    const [changed, setChanged] = useState(false);
     
     const handleKey = (e) => {
 
@@ -110,12 +109,11 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
     
     let animation = { opacity: [0, 0.1, 0.3, 0.5, 0.8, 1], y: [-100, 0], x: [700, 0] }
     let animation1 = { opacity: [0,1], y: [-101, 0], x: [701, 0] }
-
+    const [changed, setChanged] = useState(false);
     useEffect(() => {
-        
-       
+
         if (thatLetter.length === 1) {
-            setChanged(!changed);
+            setChanged((changed) => !changed);
         }
 
     }, [thatLetter])
@@ -133,7 +131,7 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
                     <div id='box-for-input'>
                         <motion.p
                             animate={changed ? animation:animation1}
-                            transition={{ type: "spring", stiffness: 0, duration: 0.7 }}
+                            transition={{ type: "spring", stiffness: 0, duration: 0.4 }}
                             id="answer">{thatLetter}</motion.p>
                     </div>
                 </div>
