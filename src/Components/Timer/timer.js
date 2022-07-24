@@ -21,7 +21,7 @@ export function Timerwithscore({ minute, second, guessed }) {
 
     return (
         <>
-            <motion.div  animate={{opacity: [0,0.1,0.3,0.5,0.8,1]}} className="timer">
+            <motion.div  className="timer">
                 <p style={minute === 0 ? second < 10 ? stylesForRed : stylesForNormal: stylesForNormal}id='time'>{`${formattedMinute}:${formattedSecond}`}</p>
                 <p  id='gussed'>Guessed: {guessed}</p>
             </motion.div>
