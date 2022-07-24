@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './textBox.css';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion/dist/framer-motion';
+
 
 export function TextBox({ randomCity, thatLetter, message, dispatch }) {
 

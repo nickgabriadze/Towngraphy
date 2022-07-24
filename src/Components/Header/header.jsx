@@ -3,7 +3,8 @@ import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import {faBars, faAngleLeft, faCopyright, faEnvelope, faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion/dist/framer-motion';
+
 
 export function Header() {
     const [opened, setOpened] = useState(false);

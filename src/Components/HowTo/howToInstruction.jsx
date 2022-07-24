@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './howToInstruction.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
-import {motion} from 'framer-motion';
+import {motion} from 'framer-motion/dist/framer-motion';
+
 export function HowTo() {
     const [clicked, setClicked] = useState(false);
 
