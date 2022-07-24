@@ -27,6 +27,7 @@ export function reducer(state, { type, char }) {
 
         case ACTIONS.REMOVE_LETTER:
             if (state.gameOver) return state;
+            
             if (state.nextCity.length === 1) {
                 return state;
             };
@@ -38,7 +39,10 @@ export function reducer(state, { type, char }) {
 
         case ACTIONS.ENTER:
             if (state.gameOver) return state;
+
             state.nextCity = state.nextCity.trim()
+
+    
 
             if (state.nextCity.length === 1) {
                 return state;
@@ -60,6 +64,15 @@ export function reducer(state, { type, char }) {
                     })
                 }
             }
+
+            if(state.nextCity === state.randomCity){
+                return({
+                    ...state,
+                    message: "That one is already displayed!"
+                })
+
+            }
+
             let currentCity = state.nextCity
             let nextOne = currentCity[currentCity.length - 2].toUpperCase()
 

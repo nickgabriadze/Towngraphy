@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './textBox.css';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export function TextBox({ randomCity, thatLetter, message, dispatch }) {
-
+    const [changed, setChanged] = useState(false)
     const handleKey = (e) => {
 
         if (e.key === 'Backspace' || e.key === 'Delete') {
@@ -107,6 +107,16 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
             window.removeEventListener('keydown', handleKey);
         };
     })
+    
+    let animation = { opacity: [0, 0.1, 0.3, 0.5, 0.8, 1], y: [-100, 0], x: [700, 0] }
+    let animation1 = { opacity: [0,1], y: [-101, 0], x: [701, 0] }
+
+    useEffect(() => {
+        if (thatLetter.length === 1) {
+            setChanged(!changed)
+        }
+    }, [thatLetter])
+
 
 
     return (
@@ -119,8 +129,8 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
 
                     <div id='box-for-input'>
                         <motion.p
-                            animate={{ opacity: [0, 0.1, 0.3, 0.5, 0.8, 1], y: [-200, 0], x: [700, 0] }}
-                            transition={{ type: "spring", stiffness: 0 }}
+                            animate={changed ? animation:animation1}
+                            transition={{ type: "spring", stiffness: 0, duration: 0.5 }}
                             id="answer">{thatLetter}</motion.p>
                     </div>
                 </div>
