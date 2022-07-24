@@ -3,7 +3,9 @@ import './textBox.css';
 import { motion } from 'framer-motion';
 
 export function TextBox({ randomCity, thatLetter, message, dispatch }) {
-    const [changed, setChanged] = useState(false)
+    const [changed, setChanged] = useState(false);
+    const [pressedEnter, setPressedEnter] = useState(false);
+    
     const handleKey = (e) => {
 
         if (e.key === 'Backspace' || e.key === 'Delete') {
@@ -32,7 +34,6 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
         }
         if (e.key === 'i') {
             dispatch({ type: "ADD_LETTER", char: 'i' })
-
         }
         if (e.key === 'o') {
             dispatch({ type: "ADD_LETTER", char: 'o' })
@@ -112,9 +113,12 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
     let animation1 = { opacity: [0,1], y: [-101, 0], x: [701, 0] }
 
     useEffect(() => {
+        
+       
         if (thatLetter.length === 1) {
-            setChanged(!changed)
+            setChanged(!changed);
         }
+
     }, [thatLetter])
 
 
