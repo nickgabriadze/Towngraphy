@@ -1,10 +1,19 @@
-import React from 'react';
-
-
+import React, {useState} from 'react';
+import './privacy.css';
+import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 export function PrivacyPolicy(){
+    const [clicked, setClicked] = useState(false)
     return(
     <>
-    <div  id="privacy" style={{'text-align':'center'}}>
+    <div className="privacy-div">
+    <motion.div  layout transition={{layout: {duration:0.8}}} id="mainBox"   onClick={() => setClicked(!clicked)}>
+        <motion.p id="header"layout="position">Website uses Framer Motion Animations</motion.p>
+        
+        <div>
+    {clicked ? <motion.div layout="position" id="privacy" style={{'textAlign':'center'}}>
     The MIT License (MIT)
 
 Copyright (c) 2018 Framer B.V.
@@ -26,7 +35,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+    </motion.div>: ''}
     </div>
+    </motion.div>
+    <motion.p style={{'paddingTop': '10px'}}><Link to="/" id="back"><FontAwesomeIcon icon={faArrowLeft}/> Back to Game</Link></motion.p>
+    </div>
+
     </>
+
     );
 }
