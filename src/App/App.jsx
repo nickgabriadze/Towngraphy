@@ -30,6 +30,7 @@ function App() {
     const myInterval = setInterval(() => {
 
         dispatch({ type: "START_TIMER"})
+        
       
     }, 1000)
     return () => {
@@ -40,19 +41,19 @@ function App() {
   const popUp = <PopUp guessed={state.guessed} dispatch={dispatch} />
   return (
     <>
-
+   
     {state.gameOver? popUp : ''}
 
     <Header />
     <div id='score-howTo'>
       <HowTo id="how-to-box"/>
-      <Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} />
+      {window.innerWidth > 480 ? <Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> : ''}
       </div>  
       
       <div className="container">
 
           
-          <div id="duplicate-timer" ><Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> </div>
+          {window.innerWidth <= 480? <div id="duplicate-timer" ><Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> </div> : ''}
           <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
       
         <div id="keyBrd">
