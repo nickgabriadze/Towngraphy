@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 
 export function TextBox({ randomCity, thatLetter, message, dispatch }) {
     const [changed, setChanged] = useState(false);
-    const [pressedEnter, setPressedEnter] = useState(false);
     
     const handleKey = (e) => {
 
