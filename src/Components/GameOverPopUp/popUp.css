@@ -37,6 +37,7 @@
     right: 50%;
     transform: translate(-50%, -50%);
 }
+<<<<<<< HEAD
 
 
 @media screen and (max-width: 480px) {
@@ -63,3 +64,5 @@
 @media screen and (min-height: 800px) and (min-width: 1000px) {
 
 }
+=======
+>>>>>>> parent of dd26a67... Made g
