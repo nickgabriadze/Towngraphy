@@ -21,7 +21,6 @@
     font-weight: 300;
     border-color: #a4bdcb;
     overflow: hidden;
-
     box-shadow: 2px 2px #a4bdcb;
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
@@ -31,7 +30,6 @@
     padding-left: 3px;
     justify-items: center;
     font-size: 25px;
-
 }
 
 #pre-defined {
@@ -45,7 +43,6 @@
 #message {
     padding: 10px;
     text-align: center;
-
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial NarrowCourier New', 'Courier', 'monospace', 'sans-serif';
 }
 
@@ -62,7 +59,6 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-
     }
 
     #answer {
@@ -78,12 +74,10 @@
     }
 
     .entire-textBox {
-
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-
     }
 
     #answer {
@@ -104,7 +98,6 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-
     }
 
     #answer {
@@ -119,7 +112,6 @@
         width: 40rem;
         height: fit-content;
     }
-
 
     #pre-defined {
         font-size: 4rem;

@@ -9,32 +9,26 @@ button {
     border: 2px solid #ebeeef;
     background-color: #a4bdcb;
     font-size: 15px;
-    font-family:'Poppins', 'sans-serif';
-    
+    font-family: 'Poppins', 'sans-serif';
 }
-#keyboard{
+
+#keyboard {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 button:focus {
     outline: none;
+    background-color: #939596;
 }
-
-
 
 .keyboard-grid {
     display: grid;
-    
-  
-    grid-template-columns: repeat(10,minmax(3rem,1fr));
-    grid-template-rows: repeat(4,minmax(3rem, 1fr));
-   
+    grid-template-columns: repeat(10, minmax(3rem, 1fr));
+    grid-template-rows: repeat(4, minmax(3rem, 1fr));
 }
-
 
 
 #enter-button {
@@ -48,74 +42,70 @@ button:focus {
 }
 
 
-@media screen and (max-width: 480px){
-    #keyboard{
+@media screen and (max-width: 480px) {
+    #keyboard {
         position: absolute;
         left: 0;
         bottom: 0;
     }
-    .keyboard-grid{
-  
-    grid-template-columns: repeat(10,minmax(2.3rem,3rem));
-    grid-template-rows: repeat(4,minmax(2.5rem, 4.2rem));
-   
-    }
-    button{
-        font-size: 18px;    
-    
+
+    .keyboard-grid {
+        grid-template-columns: repeat(10, minmax(2.3rem, 3rem));
+        grid-template-rows: repeat(4, minmax(2.5rem, 4.2rem));
     }
 
-    
+    button {
+        font-size: 18px;
+    }
 }
 
-@media screen and (max-width: 380px){
-    #keyboard{
+@media screen and (max-width: 380px) {
+    #keyboard {
         position: absolute;
         left: 0;
         bottom: 0;
     }
-    .keyboard-grid{
-  
-    grid-template-columns: repeat(10,minmax(2rem,2.5rem));
-    grid-template-rows: repeat(4,minmax(1.7rem, 3rem));
-   
+
+    .keyboard-grid {
+        grid-template-columns: repeat(10, minmax(2rem, 2.5rem));
+        grid-template-rows: repeat(4, minmax(1.7rem, 3rem));
     }
-    button{
-        font-size: 15px;    
+
+    button {
+        font-size: 15px;
     }
 
 }
 
-@media screen and (max-width: 320px){
-    #keyboard{
+@media screen and (max-width: 320px) {
+    #keyboard {
         position: absolute;
         left: 0;
         bottom: 0;
     }
-    .keyboard-grid{
 
-    grid-template-columns: repeat(10,minmax(1.7rem,3rem));
-    grid-template-rows: repeat(4,minmax(1.5rem, 3rem));
-   
-    }
-    button{
-        font-size: 15px;   
+    .keyboard-grid {
+        grid-template-columns: repeat(10, minmax(1.7rem, 3rem));
+        grid-template-rows: repeat(4, minmax(1.5rem, 3rem));
 
     }
 
+    button {
+        font-size: 15px;
+    }
 }
 
-@media  screen and (min-height: 800px) and (min-width: 1000px){
-   
-    .keyboard-grid{
+@media screen and (min-height: 800px) and (min-width: 1000px) {
 
-    grid-template-columns: repeat(10,minmax(4rem,1fr));
-    grid-template-rows: repeat(4,minmax(4rem, 1fr));
-   
+    .keyboard-grid {
+        grid-template-columns: repeat(10, minmax(4rem, 1fr));
+        grid-template-rows: repeat(4, minmax(4rem, 1fr));
+
     }
-    button{
-        font-size: 18px; 
-        border-radius: 7px;  
+
+    button {
+        font-size: 18px;
+        border-radius: 7px;
 
     }
 }
