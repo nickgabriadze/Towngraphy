@@ -47,8 +47,22 @@ a {
 }
 
 
-@media (mix-width: 450px){
-    .footer-container{
-        display: none;
+@media screen and (min-width:1000px) and (min-height: 800px){
+    #flexable-footer{
+        height: 5rem;
     }
+
+    .footer-container{
+        height: 5rem;
+        box-shadow: 0 0 0 0.5px black;
+    }
+    #copyright-logo-with-text {
+        font-size: 2rem;
+    }
+
+    #envelope, #contact-mail{
+        font-size: 2rem;
+    }
+
+    
 }

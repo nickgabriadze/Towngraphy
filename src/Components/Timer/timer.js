@@ -23,7 +23,7 @@ export function Timerwithscore({ minute, second, guessed }) {
         <>
             <motion.div  className="timer">
                 <p style={minute === 0 ? second < 10 ? stylesForRed : stylesForNormal: stylesForNormal}id='time'>{`${formattedMinute}:${formattedSecond}`}</p>
-                <p  id='gussed'>Guessed: {guessed}</p>
+                <p  id='guessed'>Guessed: {guessed}</p>
             </motion.div>
         </>
     );

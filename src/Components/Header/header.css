@@ -102,3 +102,9 @@
         padding-top: 12px;
     }
 }
+
+@media screen and (max-width: 300px){
+    .explain-mobile{
+        width: 200px;
+    }
+}

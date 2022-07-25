@@ -53,3 +53,19 @@ body{
      
      
 }
+
+
+
+@media screen and (min-width:800px) and (min-height: 800px) {
+  #score-howTo{
+    padding-bottom: 0;
+  }
+
+  .container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+

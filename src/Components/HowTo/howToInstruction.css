@@ -1,18 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-#circle-questionMark{
+
+#circle-questionMark {
     font-size: 2rem;
     cursor: pointer;
 }
 
-#explanation{
+#explanation {
     background-color: #9d9d9d;
     text-align: center;
     color: rgb(255, 255, 255);
     border-radius: 5px;
-    padding: 2px;  
+    padding: 2px;
     width: 200px;
     height: auto;
-    font-size:10px;
-    font-family: 'Poppins','Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+    font-size: 10px;
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
     cursor: pointer;
+}
+
+@media screen and (min-width:1000px) and (min-height: 800px) {
+    #explanation {
+        font-size: 1.2rem;
+        width: 40%;
+    }
+
+    #circle-questionMark {
+        font-size: 3rem;
+
+    }
 }

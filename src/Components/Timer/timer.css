@@ -10,8 +10,19 @@
 #time{
     color: #92abba;
     font-size: 3rem;
-
     font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+
+@media screen and (min-width:1000px) and (min-height: 800px) {
+   #time{
+    font-size: 4rem;
+   }
+
+   #guessed{
+    font-size: 2rem;
+   }
+
 }
 
 

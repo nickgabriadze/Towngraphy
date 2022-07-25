@@ -116,13 +116,14 @@
 
 @media screen and (min-height: 800px) and (min-width: 1000px) {
     #box-for-input {
-        width: 100%;
+        width: 40rem;
         height: fit-content;
     }
 
 
     #pre-defined {
         font-size: 4rem;
+        text-align: center;
     }
 
     #answer {
