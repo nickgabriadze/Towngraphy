@@ -46,7 +46,7 @@ a {
 }
 
 
-@media screen and (min-width:1000px) and (min-height: 800px){
+@media screen and (min-width:700px) and (min-height: 800px){
     #flexable-footer{
         height: 5rem;
     }

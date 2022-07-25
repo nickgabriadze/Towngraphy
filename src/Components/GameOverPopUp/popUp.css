@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 #popUp-box{
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 50%;  
     left: 50%; 
     transform: translate(-50%, -50%);
@@ -37,32 +37,45 @@
     right: 50%;
     transform: translate(-50%, -50%);
 }
-<<<<<<< HEAD
 
 
 @media screen and (max-width: 480px) {
     #popUp-box{
         width: 80%;
         height: 30%;
+        position: absolute;
+        top:40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-
-   
 }
 
 
 @media screen and (max-width: 320px) {
  
-    #restart{
+    #restart, #times-up{
         font-size: 1rem;
     }
 
-    #times-up{
-        font-size: 1rem;
-    }
+    
 }
 
 @media screen and (min-height: 800px) and (min-width: 1000px) {
+   
+    #popUp-box{
+        width: 40%;
+        height: 50%;
+    }
+   
+    #restart{
+        font-size: 2rem;
+    }
 
+    #times-up{
+        font-size: 3rem;
+    }
+
+    #guessed-number{
+        font-size: 1.5rem;
+    }
 }
-=======
->>>>>>> parent of dd26a67... Made g

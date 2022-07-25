@@ -94,7 +94,7 @@ button:focus {
     }
 }
 
-@media screen and (min-height: 800px) and (min-width: 1000px) {
+@media screen and (min-height: 800px) and (min-width: 700px) {
 
     .keyboard-grid {
         grid-template-columns: repeat(10, minmax(4rem, 1fr));

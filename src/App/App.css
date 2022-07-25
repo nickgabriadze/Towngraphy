@@ -51,7 +51,7 @@ body{
 
 
 
-@media screen and (min-width:800px) and (min-height: 800px) {
+@media screen and (min-width:700px) and (min-height: 800px) {
   #score-howTo{
     padding-bottom: 0;
   }
