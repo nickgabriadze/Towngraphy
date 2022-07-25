@@ -37,3 +37,32 @@
     right: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+@media screen and (max-width: 480px) {
+    #popUp-box{
+        width: 80%;
+        height: 30%;
+    }
+
+   
+}
+
+@media screen and (max-width: 380px) {
+  
+}
+
+@media screen and (max-width: 320px) {
+ 
+    #restart{
+        font-size: 1rem;
+    }
+
+    #times-up{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-height: 800px) and (min-width: 1000px) {
+
+}
