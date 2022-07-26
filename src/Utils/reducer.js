@@ -1,7 +1,7 @@
 import { ACTIONS } from "./actions.js";
 import { checkCity } from "../CheckOrGenerate/checkCity.js";
 import { cities } from "./cities.js";
-import {randCity} from "../CheckOrGenerate/randomCity.js";
+import { randCity } from "../CheckOrGenerate/randomCity.js";
 import { popularCities } from "./cities.js";
 
 export function reducer(state, { type, char }) {
