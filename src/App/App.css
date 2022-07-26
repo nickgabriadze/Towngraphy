@@ -39,13 +39,18 @@ body {
         display: none;
     }
 
-    #duplicate-timer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 2rem;
-        padding-bottom: 20%;
+    #duplicate-timer{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding-top: 2rem;
     }
+
+   
+
+   
+
+
 }
 
 

@@ -61,8 +61,8 @@ function App() {
 
       <div className="container">
         {width <= 480 ? <div id="duplicate-timer" ><Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> </div> : ''}
-        <TextBox randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
-
+        <TextBox id="textBox-with-randCity"randomCity={state.randomCity} thatLetter={state.nextCity} message={state.message} dispatch={dispatch} />
+       
         <div id="keyBrd">
           <Keyboard dispatch={dispatch} />
         </div>

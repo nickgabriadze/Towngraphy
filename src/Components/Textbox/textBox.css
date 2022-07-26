@@ -22,13 +22,15 @@
     border-color: #a4bdcb;
     overflow: hidden;
     box-shadow: 2px 2px #a4bdcb;
+    word-wrap : break-word;
+    word-break: break-all;
+   
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
 #answer {
-    display: flex;
+    text-align: left;
     padding-left: 3px;
-    justify-items: center;
     font-size: 25px;
 }
 
