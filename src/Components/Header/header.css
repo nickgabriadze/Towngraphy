@@ -40,10 +40,12 @@
         margin-top: 10px; 
     }
 
-    #hamburger-menu,#hamburger-menu-opened, #mail, #copyright-logo{
+    #hamburger-menu,#hamburger-menu-opened, #mail, #copyright-logo, #contact-mail-header{
         color: white;
         font-size: 2.5rem;
     }
+
+  
 
     #website-name{
         color:white;
