@@ -51,7 +51,7 @@ export function reducer(state, { type, char }) {
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
-                    message: "You made it up for sure!",
+                    message: "Not in a city/country list!",
                     nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
                 })
             }
@@ -60,18 +60,11 @@ export function reducer(state, { type, char }) {
                 if (state.usedCities[i] === state.nextCity) {
                     return ({
                         ...state,
-                        message: "You already said that one!"
+                        message: "Already said or it's displayed!"
                     })
                 }
             }
 
-            if(state.nextCity === state.randomCity){
-                return({
-                    ...state,
-                    message: "That one is already displayed!"
-                })
-
-            }
 
             let currentCity = state.nextCity
             let nextOne = currentCity[currentCity.length - 2].toUpperCase()
