@@ -121,7 +121,7 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
                     <div id='box-for-input'>
                         <motion.p
                             animate={animation}
-                            transition={{ type: "spring", stiffness: 0, duration: 0.4 }}
+                            transition={{ type: "spring", stiffness: 0, duration: 1 }}
                             id="answer">{thatLetter}</motion.p>
                     </div>
                 </div>
