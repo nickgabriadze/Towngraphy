@@ -19,10 +19,7 @@ button {
     align-items: center;
 }
 
-button:focus {
-    outline: none;
-    background-color: #939596;
-}
+
 
 .keyboard-grid {
     display: grid;
