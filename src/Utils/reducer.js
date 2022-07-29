@@ -45,7 +45,8 @@ export function reducer(state, { type, char }) {
             if(!state.started & state.nextCity === state.randomCity){
                 return ({
                     ...state,
-                    message: "That's already Displayed!"
+                    message: "That's already Displayed!",
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
                 })
             }
 
