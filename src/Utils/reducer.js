@@ -19,6 +19,12 @@ export function reducer(state, { type, char }) {
                 })
             }
 
+            if(state.nextCity[state.nextCity.length -1] === '-'){
+                return({
+                    ...state, nextCity: state.nextCity + char.toUpperCase()
+                })
+            }
+
             return ({
                 ...state,
                 nextCity: state.nextCity + char,
