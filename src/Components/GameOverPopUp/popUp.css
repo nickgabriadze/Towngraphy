@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 #popUp-box{
     position: absolute;
     z-index: 3;
@@ -10,15 +11,17 @@
     width: 25rem;
     height: 20rem;
     border-radius: 1rem;
-    background-color: #a4bdcb;
-    border: 2px solid black;
-    box-shadow: 1px 1px #000000;
+    color: white;
+    background-color: #323237;
+    border: 2px solid white;
+    box-shadow: 1px 1px #323237;
 }
 
 #times-up{
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial',' sans-serif';
     font-weight: bold;
     padding-top: 1rem;
+    color: #c3073f;
     font-size: 2rem;
 }
 
@@ -28,13 +31,16 @@
 
 #restart{
     position: absolute;
-    border: 2px solid#000000;
+    border: 2px solid white;
     width: fit-content;
     font-size: 20px;
     height: fit-content;
+    color: #c3073f;
+    font-weight: bold;
     bottom: 0;
     left: 50%;
     right: 50%;
+    background-color: #323237;
     transform: translate(-50%, -50%);
 }
 
@@ -44,7 +50,7 @@
         width: 80%;
         height: 30%;
         position: absolute;
-        top:40%;
+        top:35%;
         left: 50%;
         transform: translate(-50%, -50%);
     }

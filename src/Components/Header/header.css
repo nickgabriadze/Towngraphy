@@ -78,6 +78,7 @@
         height: fit-content;
         justify-content: center;
         align-items: center;
+        outline: 1px solid rgb(255, 255, 255);
         width: 80%;
         height: 30%;
         font-size: 1.2rem;
@@ -90,7 +91,7 @@
         font-size: 1rem;
         margin-top: 10px;
         width: fit-content;
-        outline: 2px solid rgb(255, 255, 255);
+        outline: 1px solid rgb(255, 255, 255);
         border: none;
         text-align: center;
     }
