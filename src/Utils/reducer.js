@@ -9,7 +9,7 @@ export function reducer(state, { type, char }) {
     switch (type) {
 
         case ACTIONS.ADD_LETTER:
-        
+
 
             if (state.gameOver) return state;
 
@@ -19,10 +19,14 @@ export function reducer(state, { type, char }) {
                 })
             }
 
-            if(state.nextCity[state.nextCity.length -1] === '-'){
-                return({
+            if (state.nextCity[state.nextCity.length - 1] === '-') {
+                return ({
                     ...state, nextCity: state.nextCity + char.toUpperCase()
                 })
+            }
+
+            if (!state.started) {
+                state.usedCities.push(state.randomCity);
             }
 
             return ({
@@ -33,7 +37,7 @@ export function reducer(state, { type, char }) {
 
         case ACTIONS.REMOVE_LETTER:
             if (state.gameOver) return state;
-            
+
             if (state.nextCity.length === 1) {
                 return state;
             };
@@ -48,13 +52,6 @@ export function reducer(state, { type, char }) {
 
             state.nextCity = state.nextCity.trim()
 
-            if(!state.started & state.nextCity === state.randomCity){
-                return ({
-                    ...state,
-                    message: "That's already Displayed!",
-                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
-                })
-            }
 
             if (state.nextCity.length === 1) {
                 return state;
@@ -68,13 +65,30 @@ export function reducer(state, { type, char }) {
                 })
             }
 
-            for (let i = 0; i < state.usedCities.length; i++) {
-                if (state.usedCities[i] === state.nextCity) {
-                    return ({
-                        ...state,
-                        message: "Already Said!",
-                        nextCity: state.randomCity[state.randomCity.length -2].toUpperCase()
-                    })
+            if(state.usedCities[0] === state.nextCity & !state.started){
+                return({
+                    ...state,
+                    message: "That is displayed right now!",
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                })
+            }
+
+            if (state.usedCities[0] === state.nextCity) {
+                return ({
+                    ...state,
+                    message: "That was displayed at the start!",
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                })
+
+            } else {
+                for (let i = 1; i < state.usedCities.length; i++) {
+                    if (state.usedCities[i] === state.nextCity) {
+                        return ({
+                            ...state,
+                            message: "Already Said!",
+                            nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                        })
+                    }
                 }
             }
 
@@ -122,7 +136,7 @@ export function reducer(state, { type, char }) {
 
             let generatedCity = randCity(popularCities);
             let nextCity = generatedCity[generatedCity.length - 2].toUpperCase();
-           
+
 
             return ({
                 ...state,
@@ -130,7 +144,7 @@ export function reducer(state, { type, char }) {
                 message: '', guessed: 0, started: false, usedCities: [],
                 minutes: 1, seconds: 20, gameOver: false
             })
-       
+
 
 
         default: return state;
