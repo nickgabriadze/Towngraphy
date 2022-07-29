@@ -25,10 +25,6 @@ export function reducer(state, { type, char }) {
                 })
             }
 
-            if (!state.started) {
-                state.usedCities.push(state.randomCity);
-            }
-
             return ({
                 ...state,
                 nextCity: state.nextCity + char,
@@ -51,17 +47,22 @@ export function reducer(state, { type, char }) {
             if (state.gameOver) return state;
 
             state.nextCity = state.nextCity.trim()
-
+         
 
             if (state.nextCity.length === 1) {
                 return state;
+            }
+
+            if (!state.started & state.enterCounter === 0) {
+                state.usedCities[0] = state.randomCity;
             }
 
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
                     message: "Not in a city/country list!",
-                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase(),
+                    enterCounter: state.enterCounter + 1
                 })
             }
 
@@ -69,7 +70,8 @@ export function reducer(state, { type, char }) {
                 return({
                     ...state,
                     message: "That is displayed right now!",
-                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase(),
+                    enterCounter: state.enterCounter + 1
                 })
             }
 
@@ -77,7 +79,8 @@ export function reducer(state, { type, char }) {
                 return ({
                     ...state,
                     message: "That was displayed at the start!",
-                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                    nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase(),
+                    enterCounter: state.enterCounter + 1
                 })
 
             } else {
@@ -86,7 +89,8 @@ export function reducer(state, { type, char }) {
                         return ({
                             ...state,
                             message: "Already Said!",
-                            nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase()
+                            nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase(),
+                            enterCounter: state.enterCounter + 1
                         })
                     }
                 }
@@ -103,7 +107,7 @@ export function reducer(state, { type, char }) {
                 started: true,
                 guessed: state.guessed + 1,
                 usedCities: [...state.usedCities, currentCity],
-
+                enterCounter: state.enterCounter + 1
             });
         case ACTIONS.START_TIMER:
             if (!state.started) return state;
