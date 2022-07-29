@@ -21,7 +21,7 @@ export function Footer() {
 
                     <div id="copyright-logo-with-text">
                         <FontAwesomeIcon id="copyright-logo" icon={faCopyright} />
-                        <Link to="/privacy-policy">Privacy Policy</Link>
+                        <Link to="/privacy-policy" id='pp'>Privacy Policy</Link>
                     </div>
                 </div>
             </div>

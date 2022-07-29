@@ -3,11 +3,11 @@ import './timer.css';
 import {motion} from 'framer-motion';
 
 const stylesForRed ={
-    'color': '#F90B31',
+    'color': '#c3073f',
     'fontWeight': 'bold'
 }
 const stylesForNormal ={
-    'color': '#92abba',
+    'color': 'white',
     'fontWeight': 'bold'
 }
 

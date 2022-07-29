@@ -5,10 +5,11 @@ button {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
+    color: white;
     text-decoration: none;
-    border: 2px solid #ebeeef;
-    background-color: #a4bdcb;
-    font-size: 15px;
+    border: 1.35px solid white;
+    background-color: #1A1A1D;
+    font-size: 21px;
     font-family: 'Poppins', 'sans-serif';
 }
 
@@ -23,8 +24,8 @@ button {
 
 .keyboard-grid {
     display: grid;
-    grid-template-columns: repeat(10, minmax(3rem, 1fr));
-    grid-template-rows: repeat(4, minmax(3rem, 1fr));
+    grid-template-columns: repeat(10, minmax(3.2rem, 1fr));
+    grid-template-rows: repeat(4, minmax(3.2rem, 1fr));
 }
 
 

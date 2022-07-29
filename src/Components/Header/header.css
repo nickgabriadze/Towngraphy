@@ -14,7 +14,7 @@
 @media (max-width:480px) {
     
     #header-main, #after-open{
-        background-color: #899da9;
+        background-color: #1A1A1D;
         width: 100%;
         height: 4rem;
         display: flex;
@@ -22,7 +22,7 @@
         justify-content: space-between;
         padding-left: 5px;
         padding-right: 5px;
-        box-shadow: 0 0 2px 2px rgb(164, 136, 136);
+        box-shadow: 0 0 2px 2px white;
         flex-grow: 1;
         border-bottom-left-radius: 5px;     
         border-bottom-right-radius: 5px;           
@@ -68,8 +68,9 @@
     
     .explain-mobile {
         display: flex;
+        color: white;
         flex-direction: column;
-        background-color: #a4bdcb;
+        background-color: #323237;
         z-index: 2;
         position: absolute;
         top: 40%;
@@ -89,7 +90,7 @@
         font-size: 1rem;
         margin-top: 10px;
         width: fit-content;
-        outline: 2px solid black;
+        outline: 2px solid rgb(255, 255, 255);
         border: none;
         text-align: center;
     }
