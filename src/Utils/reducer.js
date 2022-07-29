@@ -42,7 +42,12 @@ export function reducer(state, { type, char }) {
 
             state.nextCity = state.nextCity.trim()
 
-    
+            if(!state.started & state.nextCity === state.randomCity){
+                return ({
+                    ...state,
+                    message: "That's already Displayed!"
+                })
+            }
 
             if (state.nextCity.length === 1) {
                 return state;
@@ -60,7 +65,8 @@ export function reducer(state, { type, char }) {
                 if (state.usedCities[i] === state.nextCity) {
                     return ({
                         ...state,
-                        message: "Already said or it's displayed!"
+                        message: "Already Said!",
+                        nextCity: state.randomCity[state.randomCity.length -2].toUpperCase()
                     })
                 }
             }
