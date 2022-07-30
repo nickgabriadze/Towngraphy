@@ -7,6 +7,9 @@ import {motion} from 'framer-motion';
 export function HowTo() {
     const [clicked, setClicked] = useState(false);
 
+    const secondToLast = <div style={{'color':'#c3073f', 'fontWeight':'bold'}}>second to last</div>
+    const citiesOrCountries = <div style={{'color':'#c3073f', 'fontWeight':'bold'}}>cities/countries</div>
+
     const questionMark = <motion.div layout='position' transition={{
         layout: {
             duration: 0.5,
@@ -18,7 +21,7 @@ export function HowTo() {
             duration: 0.5,
         },
     }}
-        animate={{ opacity: [0, 0.1, 0.3, 0.5, 0.8, 1] }} id="explanation">Guess as many cities as you can, starting with a letter that is second to last character of the given city</motion.div>
+        animate={{ opacity: [0, 0.1, 0.3, 0.5, 0.8, 1] }} id="explanation">Guess as many {citiesOrCountries} as you can, starting with a letter that is {secondToLast} character of the given city</motion.div>
 
     const handleClick = () => {
         clicked ? setClicked(false) : setClicked(true);

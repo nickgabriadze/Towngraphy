@@ -83,22 +83,21 @@
         height: 30%;
         font-size: 1.2rem;
         border-radius: 10px;
+        padding: 10px;
         transform: translate(-50%, -50%);
         font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
     }
 
     #close-explanation{
         font-size: 1rem;
-        margin-top: 10px;
+        margin-top: 20px;
         width: fit-content;
         outline: 1px solid rgb(255, 255, 255);
         border: none;
         text-align: center;
     }
 
-    #button-to-close{
-        padding-top: 20px;
-    }
+  
 }
 
 

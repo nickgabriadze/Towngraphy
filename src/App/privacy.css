@@ -6,6 +6,7 @@
 }
 
 .privacy-div{
+    color: white;
     padding-top: 5rem;
     display: flex;
     justify-content: center;
@@ -25,10 +26,10 @@ p{
 #mainBox{
     cursor: pointer;
     font-size: 20px;
-    padding: 10px;
+    padding: 30px;
     width: fit-content;
     height: fit-content;
-    box-shadow:  1px  0.5px  0.5px 1.5px rgb(86, 32, 151);
+    box-shadow:  1px  0.5px  0.5px 1.5px white;
     border-radius: 10px;
     font-family:'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial',' sans-serif';
 }
@@ -41,4 +42,5 @@ p{
 
 #back{
     font-family:'Poppins', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', 'sans-serif';
+    color: white;
 }

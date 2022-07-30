@@ -51,7 +51,6 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
         if (e.key === 'f') {
             dispatch({ type: "ADD_LETTER", char: 'f' })
         }
-
         if (e.key === 'g') {
             dispatch({ type: "ADD_LETTER", char: 'g' })
         }

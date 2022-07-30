@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 
 export function Header() {
     const [opened, setOpened] = useState(false);
-
-
     const [clicked, setClicked] = useState(false);
+    const secondToLast = <div style={{'color':'#c3073f', 'fontWeight':'bold', 'display':'inline-block'}}>second to last</div>
+    const citiesOrCountries = <div style={{'color':'#c3073f', 'fontWeight':'bold', 'display':'inline-block'}}>cities/countries</div>
 
     const forMobile = <motion.div animate={{ opacity: [0.1, 0.3, 0.5, 0.8, 1] }} className="explain-mobile">
-        <motion.p>Guess as many cities as you can, starting with a letter that is second to last character of the given city</motion.p>
+        <motion.p>Guess as many {citiesOrCountries} as you can, starting with a letter that is {secondToLast} character of the given city</motion.p>
         <div id='button-to-close'><motion.button id='close-explanation' onClick={() => setClicked(!clicked)}>Close</motion.button></div>
     </motion.div>
 
