@@ -27,7 +27,7 @@
 
 @media screen and (max-width:480px){
     #time{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     #guessed{
         font-size: 1.5rem;

@@ -24,7 +24,6 @@
     box-shadow: 4px 3px black;
     word-wrap : break-word;
     word-break: break-all;
-   
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', "Arial", "sans-serif";
 }
 
@@ -47,6 +46,11 @@
     color: white;
     padding: 10px;
     text-align: center;
+    font-size: 15px;
+    width: 100%;
+    height:fit-content;
+    word-wrap : break-word;
+    word-break: break-all;
     font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial NarrowCourier New', 'Courier', 'monospace', 'sans-serif';
 }
 
@@ -81,7 +85,7 @@
 
     .entire-textBox {
         position: absolute;
-        top: 40%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
