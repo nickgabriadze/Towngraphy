@@ -7,8 +7,8 @@ import {motion} from 'framer-motion';
 export function HowTo() {
     const [clicked, setClicked] = useState(false);
 
-    const secondToLast = <div style={{'color':'#c3073f', 'fontWeight':'bold'}}>second to last</div>
-    const citiesOrCountries = <div style={{'color':'#c3073f', 'fontWeight':'bold'}}>cities/countries</div>
+    const secondToLast = <div style={{'color':'#c3073f', 'fontWeight':'bold', 'display':'inline-block'}}>second to last</div>
+    const citiesOrCountries = <div style={{'color':'#c3073f', 'fontWeight':'bold','display':'inline-block'}}>cities/countries</div>
 
     const questionMark = <motion.div layout='position' transition={{
         layout: {
