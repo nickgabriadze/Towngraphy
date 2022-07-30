@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './textBox.css';
 import { motion } from 'framer-motion';
 
-export function TextBox({ randomCity, thatLetter, message, dispatch }) {
+export function TextBox({ randomCity, thatLetter, message, dispatch, wrongAnswer }) {
     
     const handleKey = (e) => {
 
@@ -124,7 +124,7 @@ export function TextBox({ randomCity, thatLetter, message, dispatch }) {
                             id="answer">{thatLetter}</motion.p>
                     </div>
                 </div>
-                <p id="message">{message}</p>
+                <p id="message"><p style={{'color':'#c3073f', 'display':'inline'}}>{wrongAnswer}</p>  {message}</p>
             </div>
         </>
     )

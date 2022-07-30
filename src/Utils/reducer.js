@@ -28,7 +28,8 @@ export function reducer(state, { type, char }) {
             return ({
                 ...state,
                 nextCity: state.nextCity + char,
-                message: ''
+                message: '', 
+                wrongAnswer:''
             });
 
         case ACTIONS.REMOVE_LETTER:
@@ -60,9 +61,11 @@ export function reducer(state, { type, char }) {
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
-                    message: "Not in a city/country list!",
+                    message: 'is not a city or a country!',
+                    wrongAnswer: `${state.nextCity}`,
                     nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase(),
-                    enterCounter: state.enterCounter + 1
+                    enterCounter: state.enterCounter + 1,
+                    
                 })
             }
 
@@ -146,7 +149,8 @@ export function reducer(state, { type, char }) {
                 ...state,
                 randomCity: generatedCity, nextCity: nextCity,
                 message: '', guessed: 0, started: false, usedCities: [],
-                minutes: 1, seconds: 20, gameOver: false
+                minutes: 1, seconds: 20, gameOver: false,
+                enterCounter: 0, wrongAnswer: ''
             })
 
 
