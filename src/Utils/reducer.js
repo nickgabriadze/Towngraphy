@@ -61,7 +61,7 @@ export function reducer(state, { type, char }) {
             if (!checkCity(cities, state.nextCity)) {
                 return ({
                     ...state,
-                    message: 'is not a city or a country!',
+                    message: 'is neither a city nor a country!',
                     wrongAnswer: `${state.nextCity}`,
                     nextCity: state.randomCity[state.randomCity.length - 2].toUpperCase(),
                     enterCounter: state.enterCounter + 1,
