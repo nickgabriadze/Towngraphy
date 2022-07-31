@@ -124,7 +124,7 @@ export function TextBox({ randomCity, thatLetter, message, dispatch, wrongAnswer
                             id="answer">{thatLetter}</motion.p>
                     </div>
                 </div>
-                <div id="message"><h5 style={{'color':'#c3073f', 'display':'block', 'fontSize':'15px'}}>{wrongAnswer}</h5>  {message}</div>
+                <div id="message"><h5 style={{'color':'#c3073f', 'display':'block'}}>{wrongAnswer}</h5>  {message}</div>
             </div>
         </>
     )
