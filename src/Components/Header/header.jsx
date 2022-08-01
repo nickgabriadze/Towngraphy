@@ -43,7 +43,7 @@ export function Header() {
                         rotate: 0
                     }}
                     onClick={() => setOpened(!opened)}><FontAwesomeIcon id="hamburger-menu" icon={faBars} /></motion.div>
-                <motion.div animate={{ x: [-200, 0] }} transition={{ type: "spring", stiffness: 100 }} id="website-name">Website Name</motion.div>
+                <motion.div animate={{ x: [-200, 0] }} transition={{ type: "spring", stiffness: 100 }} id="website-name">TOWNGRAPHY</motion.div>
                 <motion.div animate={{ x: [-100, 0] }} transition={{ type: "spring", stiffness: 100 }} onClick={() => setClicked(!clicked)}>{clicked ? afterClicked : questionMark}</motion.div>
             </motion.div>
         </>
