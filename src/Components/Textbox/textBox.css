@@ -98,6 +98,9 @@
     #answer {
         font-size: 1.5rem;
     }
+    #message{
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -118,7 +121,9 @@
     #answer {
         font-size: 1.3rem;
     }
-
+    #message{
+        font-size: 20px;
+    }
 }
 
 

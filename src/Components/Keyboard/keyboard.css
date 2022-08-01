@@ -20,11 +20,6 @@ button {
     align-items: center;
 }
 
-#remove-letter{
-    transform: rotate(180deg);
-}
-
-
 
 .keyboard-grid {
     display: grid;
@@ -53,10 +48,12 @@ button {
     .keyboard-grid {
         grid-template-columns: repeat(10, minmax(2.4rem, 3rem));
         grid-template-rows: repeat(4, minmax(2.5rem, 4.2rem));
+       
     }
 
     button {
         font-size: 18px;
+        border-radius: 5px;
     }
 }
 
