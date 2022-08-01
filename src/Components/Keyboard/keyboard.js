@@ -96,9 +96,8 @@ export function Keyboard({ dispatch }) {
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: '-' })}>-</motion.button>
 
-                <motion.button whileHover={{ scale: 1.05 }}
-                    onMouseDown={(e) => e.preventDefault()}
-                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft} id='remove-letter'/></motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     onMouseDown={(e) => e.preventDefault()}
                     whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</motion.button>
@@ -120,8 +119,9 @@ export function Keyboard({ dispatch }) {
                 <motion.button whileHover={{ scale: 1.1 }}
                     onMouseDown={(e) => e.preventDefault()}
                     whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'm' })}>M</motion.button>
-                <motion.button whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft} /></motion.button>
+                <motion.button whileHover={{ scale: 1.05 }}
+                    onMouseDown={(e) => e.preventDefault()}
+                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</motion.button>
 
                 <motion.button whileHover={{ scale: 1.02 }}
                     onMouseDown={(e) => e.preventDefault()}

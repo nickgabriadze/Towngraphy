@@ -20,6 +20,10 @@ button {
     align-items: center;
 }
 
+#remove-letter{
+    transform: rotate(180deg);
+}
+
 
 
 .keyboard-grid {
