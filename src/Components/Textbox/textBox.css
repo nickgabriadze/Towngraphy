@@ -90,7 +90,7 @@
 
     .entire-textBox {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -123,6 +123,18 @@
     }
     #message{
         font-size: 20px;
+    }
+}
+
+@media screen  and (max-height: 580px){
+    #answer{
+        font-size: 1rem;
+    }
+    #pre-defined{
+        font-size: 2rem;
+    }
+    #message{
+        font-size: 14px;
     }
 }
 
