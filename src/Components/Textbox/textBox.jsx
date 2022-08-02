@@ -7,8 +7,6 @@ export function TextBox({ randomCity, thatLetter, message, dispatch, wrongAnswer
     
     
     let animation = { opacity: [0, 0.1, 0.3, 0.5, 0.8, 1], y: [-100, 0], x: [700, 0] }
-   
-    
     return (
         <>
             <div className="entire-textBox">

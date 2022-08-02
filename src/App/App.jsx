@@ -10,7 +10,7 @@ import { reducer } from '../Utils/reducer.js';
 import { HowTo } from '../Components/HowTo/howToInstruction.jsx';
 import { PopUp } from '../Components/GameOverPopUp/popUp'
 import { Header } from '../Components/Header/header.jsx';
-
+import { motion } from 'framer-motion';
 
 
 function App() {
@@ -158,10 +158,11 @@ useEffect(() => {
       {state.gameOver ? popUp : ''}
 
       <Header />
-      <div id='score-howTo'>
+      <motion.div id='score-howTo'
+       animate={{opacity:[0,0.1, 0.3, 0.5, 0.8, 1]}} >
         <HowTo id="how-to-box" />
         {width > 480 ? <Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> : ''}
-      </div>
+      </motion.div>
 
       <div className="container">
         {width <= 480 ? <div id="duplicate-timer" ><Timerwithscore minute={state.minutes} second={state.seconds} guessed={state.guessed} dispatch={dispatch} /> </div> : ''}
