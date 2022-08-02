@@ -58,7 +58,7 @@ export function Header() {
                         duration: 0.5,
                         rotate: 0
                     }} onClick={() => setOpened(!opened)}><FontAwesomeIcon id="hamburger-menu-opened" icon={faAngleLeft} /></motion.div>
-                <motion.div animate={{ x: [-700, 0] }} transition={{ type: "spring", stiffness: 100 }} id="mail"><a href="mailto:something@gmail.com"><FontAwesomeIcon id="contact-mail-header" icon={faEnvelope}/></a></motion.div>
+                <motion.div animate={{ x: [-700, 0] }} transition={{ type: "spring", stiffness: 100 }} id="mail"><a href="mailto:ntgamedevelopers@gmail.com"><FontAwesomeIcon id="contact-mail-header" icon={faEnvelope}/></a></motion.div>
                 <motion.div animate={{ x: [-500, 0] }} transition={{ type: "spring", stiffness: 100 }}><Link to="/privacy-policy"><FontAwesomeIcon id="copyright-logo" icon={faCopyright} /></Link></motion.div>
             </motion.div>
         </>
