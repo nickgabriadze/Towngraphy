@@ -1,0 +1,33 @@
+[debug] [2022-08-02T17:09:18.334Z] ----------------------------------------------------------------------
+[debug] [2022-08-02T17:09:18.337Z] Command:       /home/nicka/.nvm/versions/node/v16.15.1/bin/node /home/nicka/.nvm/versions/node/v16.15.1/bin/firebase deploy
+[debug] [2022-08-02T17:09:18.338Z] CLI Version:   11.4.1
+[debug] [2022-08-02T17:09:18.338Z] Platform:      linux
+[debug] [2022-08-02T17:09:18.339Z] Node Version:  v16.15.1
+[debug] [2022-08-02T17:09:18.339Z] Time:          Tue Aug 02 2022 21:09:18 GMT+0400 (Georgia Standard Time)
+[debug] [2022-08-02T17:09:18.340Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-02T17:09:18.459Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-02T17:09:18.460Z] > authorizing via signed-in user (nickgabriadze@gmail.com)
+[debug] [2022-08-02T17:09:18.460Z] [iam] checking project first-project-2e6da for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-02T17:09:18.465Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/first-project-2e6da:testIamPermissions [none]
+[debug] [2022-08-02T17:09:18.465Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/first-project-2e6da:testIamPermissions x-goog-quota-user=projects/first-project-2e6da
+[debug] [2022-08-02T17:09:18.466Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/first-project-2e6da:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-02T17:09:19.817Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/first-project-2e6da:testIamPermissions 200
+[debug] [2022-08-02T17:09:19.817Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/first-project-2e6da:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-02T17:09:19.824Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/first-project-2e6da [none]
+[debug] [2022-08-02T17:09:20.267Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/first-project-2e6da 200
+[debug] [2022-08-02T17:09:20.267Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/first-project-2e6da {"projectId":"first-project-2e6da","projectNumber":"650226493369","displayName":"TOWNGRAPHY","name":"projects/first-project-2e6da","resources":{"hostingSite":"first-project-2e6da"},"state":"ACTIVE","etag":"1_aa3d829a-7670-4580-9815-f794506ce9ac"}
+[info] 
+[info] === Deploying to 'first-project-2e6da'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-02T17:09:20.281Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/first-project-2e6da [none]
+[debug] [2022-08-02T17:09:20.837Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/first-project-2e6da 200
+[debug] [2022-08-02T17:09:20.837Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/first-project-2e6da {"projectId":"first-project-2e6da","projectNumber":"650226493369","displayName":"TOWNGRAPHY","name":"projects/first-project-2e6da","resources":{"hostingSite":"first-project-2e6da"},"state":"ACTIVE","etag":"1_aa3d829a-7670-4580-9815-f794506ce9ac"}
+[debug] [2022-08-02T17:09:20.847Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/650226493369/sites/first-project-2e6da/versions [none]
+[debug] [2022-08-02T17:09:20.848Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/650226493369/sites/first-project-2e6da/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-02T17:09:22.572Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/650226493369/sites/first-project-2e6da/versions 200
+[debug] [2022-08-02T17:09:22.572Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/650226493369/sites/first-project-2e6da/versions {"name":"projects/650226493369/sites/first-project-2e6da/versions/c84b4243d88cae2b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[first-project-2e6da]: beginning deploy... 
+[info] i  hosting[first-project-2e6da]: found 14 files in build 
+[debug] [2022-08-02T17:09:22.598Z] [hosting] uploading with 200 concurrency
