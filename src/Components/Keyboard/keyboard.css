@@ -14,10 +14,11 @@ button {
 }
 
 #keyboard {
-    width: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 
@@ -25,18 +26,31 @@ button {
     display: grid;
     grid-template-columns: repeat(10, minmax(3rem, 1fr));
     grid-template-rows: repeat(4, minmax(3rem, 1fr));
+   
+}
+
+#space{
+    grid-row-start: 4;
+    grid-column: span 8;
+    width: 100%;
 }
 
 
 #enter-button {
+    grid-row-start: 4;
     grid-column: span 2;
-    width: 100%;
+
 }
 
-#space {
-    grid-column: span 10;
-    width: 100%;
+#hyphen{
+    grid-row-start: 3;
+    grid-column: span 2;
 }
+#remove-letter{
+    grid-column: span 2;
+    
+}
+
 
 
 @media screen and (max-width: 480px) {
@@ -48,12 +62,13 @@ button {
     .keyboard-grid {
         grid-template-columns: repeat(10, minmax(2.4rem, 3rem));
         grid-template-rows: repeat(4, minmax(2.5rem, 4.2rem));
-       
+        grid-gap: 2px;
     }
 
     button {
         font-size: 18px;
-        border-radius: 5px;
+        border-radius: 6px;
+        
     }
 }
 
