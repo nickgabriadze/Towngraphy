@@ -44,7 +44,10 @@
         color: white;
         font-size: 2.5rem;
     }
-
+    
+    #contact-mail-header{
+        padding-left: 20px;
+    }
   
 
     #website-name{
