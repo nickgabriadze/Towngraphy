@@ -149,7 +149,7 @@ export function reducer(state, { type, char }) {
                 ...state,
                 randomCity: generatedCity, nextCity: nextCity,
                 message: '', guessed: 0, started: false, usedCities: [],
-                minutes: 1, seconds: 20, gameOver: false,
+                minutes: 1, seconds: 40, gameOver: false,
                 enterCounter: 0, wrongAnswer: ''
             })
 
