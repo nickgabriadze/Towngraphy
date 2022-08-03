@@ -12,6 +12,7 @@ export function Keyboard({ dispatch }) {
     
             <div className="keyboard-grid">
 
+            
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
@@ -52,62 +53,71 @@ export function Keyboard({ dispatch }) {
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'p' })}>P</motion.button>
+               
 
-
-
+               
+               <div></div>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
+                    id='a'
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'a' })}>A</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
+                    id='s'
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 's' })}>S</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
+                    id='d'
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'd' })}>D</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    id='f'
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'f' })}>F</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
+                    id='g'
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'g' })}>G</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
+                    id='h'
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'h' })}>H</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    id='j'
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'j' })}>J</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    id='k'
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'k' })}>K</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    id='l'
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'l' })}>L</motion.button>
+                
+
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
                     id='hyphen'
                     onClick={() => dispatch({ type: "ADD_LETTER", char: '-' })}>-</motion.button>
-
-                <motion.button whileHover={{ scale: 1.02 }}
+                    <motion.button whileHover={{ scale: 1.1 }}
+                    id='z'
                     onMouseDown={(e) => e.preventDefault()}
-                    whileTap={{ scale: 0.96 }} id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</motion.button>
-                <motion.button whileHover={{ scale: 1.05 }}
-                    onMouseDown={(e) => e.preventDefault()}
-                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</motion.button>
+                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</motion.button>    
+                
+                
                 <motion.button whileHover={{ scale: 1.1 }}
                     onMouseDown={(e) => e.preventDefault()}
-                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'z' })}>Z</motion.button>
-                <motion.button whileHover={{ scale: 1.1 }}
-                    onMouseDown={(e) => e.preventDefault()}
+                    id='x'
                     whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'x' })}>X</motion.button>
                 <motion.button whileHover={{ scale: 1.1 }}
                     onMouseDown={(e) => e.preventDefault()}
@@ -126,7 +136,16 @@ export function Keyboard({ dispatch }) {
                     whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ADD_LETTER", char: 'm' })}>M</motion.button>
                 <motion.button id='remove-letter' whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "REMOVE_LETTER" })}><FontAwesomeIcon icon={faDeleteLeft} /></motion.button>
+  
 
+           
+            <motion.button whileHover={{ scale: 1.02 }}
+                    onMouseDown={(e) => e.preventDefault()}
+                    whileTap={{ scale: 0.96 }} id="space" onClick={() => dispatch({ type: "ADD_LETTER", char: ' ' })}>Space</motion.button>
+            <motion.button whileHover={{ scale: 1.05 }}
+                    onMouseDown={(e) => e.preventDefault()}
+                    whileTap={{ scale: 0.9 }} onClick={() => dispatch({ type: "ENTER" })} id="enter-button">Enter</motion.button>
+           
              
             </div>
             </div>

@@ -24,6 +24,7 @@ button {
 
 .keyboard-grid {
     display: grid;
+    
     grid-template-columns: repeat(10, minmax(3rem, 1fr));
     grid-template-rows: repeat(4, minmax(3.5rem, 1fr));
    
@@ -44,12 +45,13 @@ button {
 
 #hyphen{
     grid-row-start: 3;
-    grid-column: span 2;
+
 }
 #remove-letter{
     grid-column: span 2;
     
 }
+
 
 
 
@@ -89,8 +91,8 @@ button {
 @media screen and (max-width: 320px) {
 
     .keyboard-grid {
-        grid-template-columns: repeat(10, minmax(1.7rem, 3rem));
-        grid-template-rows: repeat(4, minmax(1.5rem, 3rem));
+        grid-template-columns: repeat(10, minmax(1.6rem, 3rem));
+        grid-template-rows: repeat(4, minmax(1.4rem, 3rem));
     }
 
     button {
@@ -99,7 +101,7 @@ button {
 }
 @media screen and (max-width: 280px){
     .keyboard-grid {
-        grid-template-columns: repeat(10, minmax(1.5rem, 3rem));
+        grid-template-columns: repeat(10, minmax(1.4rem, 3rem));
         grid-template-rows: repeat(4, minmax(1.5rem, 3rem));
     }
 }
@@ -124,4 +126,3 @@ button {
 
     }
 }
-
