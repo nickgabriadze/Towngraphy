@@ -45,6 +45,7 @@ button {
 
 #hyphen{
     grid-row-start: 3;
+    grid-column: span 2;
 
 }
 #remove-letter{

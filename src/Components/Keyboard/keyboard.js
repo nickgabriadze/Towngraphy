@@ -56,7 +56,7 @@ export function Keyboard({ dispatch }) {
                
 
                
-               <div></div>
+              
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}
