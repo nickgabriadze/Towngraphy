@@ -23,7 +23,7 @@ function App() {
       {
         randomCity: generatedCity, nextCity: nextCity,
         message: '', guessed: 0, started: false, usedCities: [],
-        minutes: 1, seconds: 40, gameOver: true, enterCounter: 0, wrongAnswer: ''
+        minutes: 1, seconds: 40, gameOver: false, enterCounter: 0, wrongAnswer: ''
       });
 
   useEffect(() => {
