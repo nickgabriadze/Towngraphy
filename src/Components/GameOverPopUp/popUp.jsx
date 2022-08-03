@@ -28,7 +28,10 @@ export function PopUp({guessed, dispatch}) {
         animate={{opacity:[0.1, 0.3, 0.5, 0.8, 1]}} id="popUp-box">
             <p id="times-up">Time's Up!</p>
             <h4 id="guessed-number">You managed to guess {number} {numberOfCities}</h4>
-            <img id="building-img"src={twoBuilding}alt="Two buildings placed next to each other"></img>
+            <img id="building-img"src={twoBuilding} objectfit="fill"
+        layout="fill"
+        quality={100}
+            alt="Two buildings placed next to each other"></img>
             <button id='restart' onClick={()=>dispatch({type:"RESTART"})}>Restart</button>
         </motion.div>
         

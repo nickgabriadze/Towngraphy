@@ -131,7 +131,7 @@ export function reducer(state, { type, char }) {
             if (state.minutes === 0 & state.seconds === 0) {
                 return ({
                     ...state,
-                    message: 'OVER!',
+                    message: '',
                     started: false,
                     gameOver: true,
                     nextCity: '',
