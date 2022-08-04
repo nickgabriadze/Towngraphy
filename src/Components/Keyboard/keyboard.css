@@ -14,11 +14,10 @@ button {
 }
 
 #keyboard {
-    
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    
 }
 
 
@@ -27,41 +26,62 @@ button {
     
     grid-template-columns: repeat(10, minmax(3rem, 1fr));
     grid-template-rows: repeat(4, minmax(3.5rem, 1fr));
-   
+
 }
 
-#space{
+#space {
     grid-row-start: 4;
-    grid-column: span 8;
+    grid-column: span 7;
     width: 100%;
 }
 
-
 #enter-button {
     grid-row-start: 4;
-    grid-column: span 2;
+    grid-column: span 3;
 
 }
 
-#hyphen{
+#spacer,
+#a,
+#s,
+#d,
+#f,
+#g,
+#h,
+#j,
+#k,
+#l {
+    grid-row-start: 2;
+}
+
+#z,
+#x,
+#c,
+#v,
+#b,
+#n,
+#m,
+#remove-letter {
     grid-row-start: 3;
-    grid-column: span 2;
-
-}
-#remove-letter{
-    grid-column: span 2;
     
 }
 
-
+#hyphen {
+    grid-row-start: 2;
+   
+}
+#remove-letter{
+    grid-column: span 3;
+}
 
 
 @media screen and (max-width: 480px) {
-    #keyboard{
+    #keyboard {
         position: absolute;
-        left:0;
+        left: 0;
         bottom: 0;
     }
+
     .keyboard-grid {
         grid-template-columns: repeat(10, minmax(2.2rem, 3rem));
         grid-template-rows: repeat(4, minmax(2.5rem, 4rem));
@@ -71,7 +91,7 @@ button {
     button {
         font-size: 18px;
         border-radius: 6px;
-        
+
     }
 }
 
@@ -100,14 +120,15 @@ button {
         font-size: 15px;
     }
 }
-@media screen and (max-width: 280px){
+
+@media screen and (max-width: 280px) {
     .keyboard-grid {
         grid-template-columns: repeat(10, minmax(1.4rem, 3rem));
         grid-template-rows: repeat(4, minmax(1.5rem, 3rem));
     }
 }
 
-@media screen and (max-height: 580px){
+@media screen and (max-height: 580px) {
     .keyboard-grid {
         grid-template-columns: repeat(10, minmax(1.5rem, 3rem));
         grid-template-rows: repeat(4, minmax(1.5rem, 2.5rem));
