@@ -16,13 +16,13 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 
 .keyboard-grid {
     display: grid;
-    
+
     grid-template-columns: repeat(10, minmax(3rem, 1fr));
     grid-template-rows: repeat(4, minmax(3.5rem, 1fr));
 
@@ -62,17 +62,19 @@ button {
 #m,
 #remove-letter {
     grid-row-start: 3;
-    
+
 }
 
 #hyphen {
     grid-row-start: 2;
-   
+
 }
-#remove-letter{
+
+#remove-letter {
     grid-column: span 2;
 }
-#spacer{
+
+#spacer {
     grid-row-start: 3;
     border: 1.35px solid white;
     border-radius: 5px;
@@ -81,7 +83,6 @@ button {
     justify-content: center;
     align-items: center;
     font-size: 21px;
-
 }
 
 @media screen and (max-width: 480px) {
