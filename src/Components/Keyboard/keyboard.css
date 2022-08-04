@@ -30,13 +30,13 @@ button {
 
 #space {
     grid-row-start: 4;
-    grid-column: span 7;
+    grid-column: span 8;
     width: 100%;
 }
 
 #enter-button {
     grid-row-start: 4;
-    grid-column: span 3;
+    grid-column: span 2;
 
 }
 
