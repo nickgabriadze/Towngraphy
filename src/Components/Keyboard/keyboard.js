@@ -1,8 +1,9 @@
 import React from 'react';
 import './keyboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
+import { faDeleteLeft, faBuilding} from '@fortawesome/free-solid-svg-icons';
 import {motion} from 'framer-motion';
+
 export function Keyboard({ dispatch }) {
 
     return (
@@ -112,8 +113,8 @@ export function Keyboard({ dispatch }) {
                     id='l'
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => dispatch({ type: "ADD_LETTER", char: 'l' })}>L</motion.button>
-                {/* <div id='spacer2'></div> */}
-
+                
+                <div id='spacer'><FontAwesomeIcon icon={faBuilding}/></div>
                 <motion.button whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onMouseDown={(e) => e.preventDefault()}

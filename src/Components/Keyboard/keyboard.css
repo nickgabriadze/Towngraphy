@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
 button {
     border-radius: 5px;
     text-align: center;
@@ -71,9 +70,19 @@ button {
    
 }
 #remove-letter{
-    grid-column: span 3;
+    grid-column: span 2;
 }
+#spacer{
+    grid-row-start: 3;
+    border: 1.35px solid white;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
 
+}
 
 @media screen and (max-width: 480px) {
     #keyboard {
@@ -93,6 +102,7 @@ button {
         border-radius: 6px;
 
     }
+
 }
 
 @media screen and (max-width: 380px) {
