@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "css-select": "^2.1.0",
     "firebase": "^9.15.0",
+    "font-awesome": "^4.7.0",
     "framer-motion": "^6.5.1",
     "kill-port": "^2.0.1",
     "nth-check": "^1.0.2",

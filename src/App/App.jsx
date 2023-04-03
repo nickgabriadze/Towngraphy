@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import './App.css';
-import { Footer } from '../Components/Footer/footer.js';
+import { Footer } from '../Components/Footer/footer.jsx';
 import { Keyboard } from '../Components/Keyboard/keyboard.js';
 import { TextBox } from '../Components/Textbox/textBox.jsx';
 import { randCity } from '../CheckOrGenerate/randomCity.js'

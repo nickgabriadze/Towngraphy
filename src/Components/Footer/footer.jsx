@@ -14,7 +14,7 @@ export function Footer() {
 
                 <div id="flexable-footer">
                     <div id="contact">
-                        <a href="mailto:something@gmail.com"><FontAwesomeIcon id="contact-mail-header" icon={faEnvelope}/></a>
+                        <FontAwesomeIcon id="contact-mail-header" icon={faEnvelope}/>
                         <a id="contact-mail" href="mailto:ntgamedevelopers@gmail.com">Contact</a>
                         
                     </div>

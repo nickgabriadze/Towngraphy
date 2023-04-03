@@ -9,6 +9,12 @@
     height: 2.87rem;
 }
 
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #flexable-footer {
     padding: 7.5px;
